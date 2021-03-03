@@ -1,4 +1,8 @@
 package com.example.wnews.model
 
-class User {
-}
+data class User (
+
+    var emailUser : String = "",
+    var pwdUser : String = ""
+
+)
