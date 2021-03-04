@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WNews</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="email_user">Email</string>
+    <string name="password_user">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sing_up">Sing Up</string>
+    <string name="terms">By joining you agree to our Terms and Conditions</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_error">It is not an email</string>
+    <string name="mail_missing">Mail is missing</string>
+    <string name="password_missing">Password is missing</string>
+    <string name="fail_login">Invalid email or password</string>
+</resources>
