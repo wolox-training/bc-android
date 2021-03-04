@@ -1,8 +1,9 @@
-package com.example.wnews
+package com.example.wnews.views.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.*
+import com.example.wnews.R
 
 class LoginActivity : AppCompatActivity(R.layout.activity_login) {
     override fun onCreate(savedInstanceState: Bundle?) {
