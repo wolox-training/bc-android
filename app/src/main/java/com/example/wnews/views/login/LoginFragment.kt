@@ -7,7 +7,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.wnews.views.main.MainActivity
 import com.example.wnews.R
-import com.example.wnews.views.signin.SignInActivity
+import com.example.wnews.views.signin.SignUpActivity
 import com.example.wnews.databinding.FragmentLoginBinding
 import com.example.wnews.models.User
 import com.example.wnews.utils.FormatUtils
@@ -73,7 +73,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         }
 
         binding!!.buttonSignUp.setOnClickListener {
-            startActivity(Intent(context, SignInActivity::class.java))
+            startActivity(Intent(context, SignUpActivity::class.java))
         }
 
         binding!!.buttonTerms.setOnClickListener {

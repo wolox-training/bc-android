@@ -12,6 +12,7 @@
 *.class
 
 # Generated files
+gradle/
 bin/
 gen/
 out/
@@ -39,6 +40,7 @@ captures/
 
 # IntelliJ
 *.iml
+.idea/
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
