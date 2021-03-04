@@ -1,5 +1,9 @@
 package com.example.wnews
 
+<<<<<<< HEAD
+=======
+import android.app.Activity
+>>>>>>> front-login
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -8,7 +12,11 @@ import android.util.Patterns
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.wnews.databinding.FragmentLoginBinding
+<<<<<<< HEAD
 import com.example.wnews.models.User
+=======
+import com.example.wnews.model.User
+>>>>>>> front-login
 
 
 private const val ARG_PARAM1 = "param1"
