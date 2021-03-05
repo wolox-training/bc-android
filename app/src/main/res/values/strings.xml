@@ -12,4 +12,6 @@
     <string name="log_in">Log In</string>
     <string name="sing_up">Sing Up</string>
 
+    <!-- SharedPreference -->
+    <string name="sharedPreferenceUserAuth">UserAuth</string>
 </resources>

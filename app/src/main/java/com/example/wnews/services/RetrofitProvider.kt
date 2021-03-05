@@ -1,4 +1,11 @@
 package com.example.wnews.services
 
-class RetrofitProvider {
+object RetrofitProvider {
+
+    private var authService:AuthService = Retrofit().requestService()!!.create(
+        AuthService::class.java
+    )
+
+    fun getAuthService():AuthService = authService
+
 }

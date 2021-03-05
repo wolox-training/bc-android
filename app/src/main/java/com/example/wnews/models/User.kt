@@ -2,7 +2,7 @@ package com.example.wnews.models
 
 data class User (
 
-    var emailUser : String = "",
-    var passwordUser : String = ""
+    var email : String = "",
+    var password : String = ""
 
 )

@@ -1,9 +1,7 @@
-package com.example.wnews.views
+package com.example.wnews.views.auth
 
 interface AuthView {
 
-    fun onAuthResponse(authSuccess: Boolean){
-
-    }
+    fun onAuthResponse(authSuccess: Boolean)
 
 }

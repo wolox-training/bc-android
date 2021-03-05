@@ -1,7 +1,7 @@
 package com.example.wnews.models
 
-data class LoginResponse(
-    var token:String = "",
-    var client:String ="",
-    var uid:String = ""
+data class UserAuth(
+    var token:String = "token",
+    var client:String ="client",
+    var uid:String = "uid"
 )

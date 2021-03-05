@@ -6,7 +6,7 @@ import retrofit2.Call
 import retrofit2.http.*
 
 
-interface NewsService {
+interface AuthService {
 
     @POST("/auth/sign_in")
     fun createUser(@Header("email") email:String,@Header("password") password:String): Call<UserAuth?>?

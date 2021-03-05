@@ -1,19 +1,23 @@
-package com.example.wnews.views.login
+package com.example.wnews.views.auth.login
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.preference.PreferenceManager
 import com.example.wnews.views.main.MainActivity
 import com.example.wnews.R
-import com.example.wnews.views.signin.SignUpActivity
+import com.example.wnews.views.auth.signup.SignUpActivity
 import com.example.wnews.databinding.FragmentLoginBinding
 import com.example.wnews.models.User
-import com.example.wnews.providers.LogInSignUpProvider
+import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.utils.FormatUtils
+import com.example.wnews.views.auth.AuthView
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
 
     private var binding: FragmentLoginBinding? = null
     private val user = User()
@@ -59,18 +63,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 return@setOnClickListener
             }
 
-            LogInSignUpProvider(requireContext()).logIn(user)
+            val  prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
-            if(user.email == "training@wolox.com.ar" && user.password == "1234"){
-
-                startActivity(Intent(context, MainActivity::class.java))
-
-            }else{
-
-                binding!!.textviewMessageError.text = getString(R.string.fail_login)
-                return@setOnClickListener
-
-            }
+            AuthPresenter(prefs,this).onResponseLogIn(user)
 
         }
 
@@ -83,5 +78,18 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             startActivity(browserIntent)
         }
     }
+
+    override fun onAuthResponse(authSuccess: Boolean) {
+
+
+        when(authSuccess){
+
+            true->startActivity(Intent(context, MainActivity::class.java))
+
+            false->binding!!.textviewMessageError.text = getString(R.string.fail_login)
+
+        }
+    }
+
 
 }

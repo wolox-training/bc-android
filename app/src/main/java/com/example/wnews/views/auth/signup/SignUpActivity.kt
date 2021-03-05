@@ -1,4 +1,4 @@
-package com.example.wnews.views.signin
+package com.example.wnews.views.auth.signup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

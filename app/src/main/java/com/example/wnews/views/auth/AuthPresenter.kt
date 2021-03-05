@@ -1,33 +1,23 @@
-package com.example.wnews.providers
+package com.example.wnews.views.auth
 
-import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import com.example.wnews.R
 import com.example.wnews.models.User
 import com.example.wnews.models.UserAuth
-import com.example.wnews.services.NewsService
-import com.example.wnews.services.Retrofit
+import com.example.wnews.services.RetrofitProvider
 import okhttp3.Headers
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class LogInSignUpProvider(var context: Context){
+class AuthPresenter(var sharedPref: SharedPreferences,val view: AuthView?){
 
-    private val sharedPref: SharedPreferences = context.getSharedPreferences(
-        context.getString(R.string.sharedPreferenceUserAuth),
-        0
-    )
 
-    fun logIn(user: User){
 
-        val service: NewsService = Retrofit().logIn()!!.create(
-            NewsService::class.java
-        )
+    fun onResponseLogIn(user: User){
 
-        val call: Call<UserAuth?>? = service.createUser(user.email,user.password)
+        val call: Call<UserAuth?>? = RetrofitProvider.getAuthService().createUser(user.email,user.password)
         call!!.enqueue(object : Callback<UserAuth?> {
 
             override fun onResponse(
@@ -48,9 +38,11 @@ class LogInSignUpProvider(var context: Context){
 
                     saveUserAuth(userAuth)
 
+                    view!!.onAuthResponse(true)
+
                 } else if (response.errorBody() != null) {
 
-                    Log.d("userAuth", response.errorBody().string())
+                    view!!.onAuthResponse(false)
 
                 }
 
@@ -64,21 +56,21 @@ class LogInSignUpProvider(var context: Context){
     }
 
     fun isLoggedIn():Boolean{
-
-        return !sharedPref.getString(context.getString(R.string.sharedPreferenceUserAuth), "").isNullOrBlank()
+        Log.d("userAuth", sharedPref.getString("UserAuth", "")!!)
+        return !sharedPref.getString("UserAuth", "").isNullOrEmpty()
 
     }
 
     fun getUserAuth():String?{
 
-        return sharedPref.getString(context.getString(R.string.sharedPreferenceUserAuth), "")
+        return sharedPref.getString("UserAuth", "")
 
     }
 
-    private fun saveUserAuth(newToken: UserAuth){
+    private fun saveUserAuth(newUserAuth: UserAuth){
 
         val editor = sharedPref.edit()
-        editor.putString(context.getString(R.string.sharedPreferenceUserAuth), newToken.toString())
+        editor.putString("UserAuth", newUserAuth.toString())
         editor.apply()
 
     }
@@ -86,7 +78,7 @@ class LogInSignUpProvider(var context: Context){
     fun killSession(){
 
         val editor = sharedPref.edit()
-        editor.putString(context.getString(R.string.sharedPreferenceUserAuth), "")
+        editor.putString("UserAuth", "")
         editor.apply()
 
     }
