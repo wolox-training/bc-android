@@ -10,6 +10,7 @@ import com.example.wnews.R
 import com.example.wnews.views.signin.SignUpActivity
 import com.example.wnews.databinding.FragmentLoginBinding
 import com.example.wnews.models.User
+import com.example.wnews.providers.LogInSignUpProvider
 import com.example.wnews.utils.FormatUtils
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -39,27 +40,28 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             binding!!.textviewMessageError.text = ""
 
             user.apply {
-                emailUser = binding!!.editTextMail.text.toString()
-                passwordUser = binding!!.editTextPassword.text.toString()
+                email = binding!!.editTextMail.text.toString()
+                password = binding!!.editTextPassword.text.toString()
             }
 
-            if(user.emailUser.isEmpty()){
+            if(user.email.isEmpty()){
                 binding!!.editTextMail.error = getString(R.string.mail_missing)
                 return@setOnClickListener
             }
 
-            if(!utils.isValidEmail(user.emailUser)){
+            if(!utils.isValidEmail(user.email)){
                 binding!!.editTextMail.error = getString(R.string.email_error)
                 return@setOnClickListener
             }
 
-            if(user.passwordUser.isEmpty()){
+            if(user.password.isEmpty()){
                 binding!!.editTextPassword.error = getString(R.string.password_missing)
                 return@setOnClickListener
             }
 
+            LogInSignUpProvider(requireContext()).logIn(user)
 
-            if(user.emailUser == "training@wolox.com.ar" && user.passwordUser == "1234"){
+            if(user.email == "training@wolox.com.ar" && user.password == "1234"){
 
                 startActivity(Intent(context, MainActivity::class.java))
 
