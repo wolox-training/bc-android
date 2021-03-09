@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100sp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_news_item"
+        android:layout_width="0dp"
+        android:layout_height="80sp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        fresco:placeholderImage="@drawable/ic_baseline_image_24"
+        fresco:failureImage="@drawable/ic_baseline_image_24"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_news_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:hint="@string/title_hint"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_title_news"/>
+
+        <TextView
+            android:id="@+id/detail_news_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            android:hint="@string/detail_hint"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableBottom="@drawable/ic_like_off"/>
+
+</LinearLayout>
+
