@@ -11,7 +11,7 @@ class LoginActivity : AppCompatActivity(R.layout.activity_login) {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add<LoginFragment>(R.id.fragment_container_view)
+                add<LoginFragment>(R.id.fragment_container_login_view)
             }
         }
     }

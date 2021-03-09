@@ -1,10 +1,12 @@
 package com.example.wnews
 
 import android.app.Application
-import com.example.wnews.services.RetrofitProvider
+import android.content.Context
+import com.example.wnews.providers.RetrofitProvider
 import com.facebook.drawee.backends.pipeline.Fresco
 
-class StartApplication: Application() {
+
+class WNewsApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
@@ -13,10 +15,16 @@ class StartApplication: Application() {
     }
 
     private fun instanceRetrofit(){
-        RetrofitProvider.getAuthService()
+        RetrofitProvider.authService
+        RetrofitProvider.newsService
     }
 
     private fun instanceFresco(){
-        Fresco.initialize(this);
+        Fresco.initialize(this)
     }
+
+    fun getContext():Context{
+        return this
+    }
+
 }

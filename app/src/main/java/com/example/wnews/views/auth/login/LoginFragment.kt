@@ -1,14 +1,11 @@
-package com.example.wnews.views.auth.login
+package com.example.wnews.v../../../../res/layout/fragment_detail.xmliews.auth.login
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
-import com.example.wnews.views.main.MainActivity
 import com.example.wnews.R
 import com.example.wnews.views.auth.signup.SignUpActivity
 import com.example.wnews.databinding.FragmentLoginBinding
@@ -16,6 +13,7 @@ import com.example.wnews.models.User
 import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.utils.FormatUtils
 import com.example.wnews.views.auth.AuthView
+import com.example.wnews.views.home.HomeActivity
 
 class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
 
@@ -49,19 +47,23 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
             }
 
             if(user.email.isEmpty()){
-                binding!!.editTextMail.error = getString(R.string.mail_missing)
+                binding!!.editTextMail.error = getString(R.string.login_mail_missing)
                 return@setOnClickListener
             }
 
             if(!utils.isValidEmail(user.email)){
-                binding!!.editTextMail.error = getString(R.string.email_error)
+                binding!!.editTextMail.error = getString(R.string.login_email_error)
                 return@setOnClickListener
             }
 
             if(user.password.isEmpty()){
-                binding!!.editTextPassword.error = getString(R.string.password_missing)
+                binding!!.editTextPassword.error = getString(R.string.login_password_missing)
                 return@setOnClickListener
             }
+
+            binding!!.progressBarLogin.visibility = View.VISIBLE
+
+            statusFields(false)
 
             val  prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -79,16 +81,25 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
         }
     }
 
-    override fun onAuthResponse(authSuccess: Boolean) {
+    override fun onAuthResponse(statusCode:Int) {
+        binding!!.progressBarLogin.visibility = View.GONE
+        statusFields(true)
+        when(statusCode){
 
-
-        when(authSuccess){
-
-            true->startActivity(Intent(context, MainActivity::class.java))
-
-            false->binding!!.textviewMessageError.text = getString(R.string.fail_login)
+            200->startActivity(Intent(context, HomeActivity::class.java))
+            401->binding!!.textviewMessageError.text = getString(R.string.login_fail_login)
+            0  ->binding!!.textviewMessageError.text = getString(R.string.login_server_error)
 
         }
+    }
+
+    private fun statusFields(status : Boolean){
+        binding!!.editTextMail.isEnabled = status
+        binding!!.editTextPassword.isEnabled = status
+        binding!!.buttonSignUp.isEnabled = status
+        binding!!.buttonLogIn.isEnabled = status
+        binding!!.buttonTerms.isEnabled = status
+
     }
 
 

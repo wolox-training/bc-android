@@ -1,18 +1,16 @@
-package com.example.wnews.views.root
+package com.example.wnews
 
+import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.preference.PreferenceManager
-import com.example.wnews.R
 import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.views.auth.login.LoginActivity
-import com.example.wnews.views.main.MainActivity
+import com.example.wnews.views.home.HomeActivity
 
-class RootActivity : AppCompatActivity() {
+class RootActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_root)
 
         val  prefs = PreferenceManager.getDefaultSharedPreferences(this)
 
@@ -21,7 +19,7 @@ class RootActivity : AppCompatActivity() {
         when(logInService.isLoggedIn()){
 
             false->startActivity(Intent(this, LoginActivity::class.java))
-            true-> startActivity(Intent(this, MainActivity::class.java))
+            true-> startActivity(Intent(this, HomeActivity::class.java))
 
         }
     }
