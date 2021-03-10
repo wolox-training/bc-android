@@ -9,7 +9,7 @@ import com.google.gson.Gson
 
 class DetailActivity : AppCompatActivity(R.layout.activity_detail) {
 
-    lateinit var newsObject :News
+    lateinit var newsObject: News
         private set
 
     override fun onCreate(savedInstanceState: Bundle?) {

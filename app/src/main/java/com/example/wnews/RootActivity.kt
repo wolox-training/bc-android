@@ -12,14 +12,14 @@ class RootActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val  prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
 
-        val logInService = AuthPresenter(prefs,null)
+        val logInService = AuthPresenter(prefs, null)
 
-        when(logInService.isLoggedIn()){
+        when (logInService.isLoggedIn()) {
 
-            false->startActivity(Intent(this, LoginActivity::class.java))
-            true-> startActivity(Intent(this, HomeActivity::class.java))
+            false -> startActivity(Intent(this, LoginActivity::class.java))
+            true -> startActivity(Intent(this, HomeActivity::class.java))
 
         }
     }

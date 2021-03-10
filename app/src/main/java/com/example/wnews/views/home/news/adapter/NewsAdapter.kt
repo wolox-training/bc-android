@@ -9,9 +9,10 @@ import com.example.wnews.databinding.ItemNewsBinding
 import com.example.wnews.models.News
 import com.example.wnews.views.home.news.NewsView
 
-class NewsAdapter(private val newsArrayList: ArrayList<News>, private val newsViews: NewsView): RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsAdapter(private val newsArrayList: ArrayList<News>, private val newsViews: NewsView) :
+    RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    override fun onCreateViewHolder( parent: ViewGroup, viewType: Int): NewsAdapter.NewsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsAdapter.NewsViewHolder {
         val root = LayoutInflater.from(parent.context).inflate(R.layout.item_news, parent, false)
         return NewsViewHolder(root)
     }
@@ -30,10 +31,10 @@ class NewsAdapter(private val newsArrayList: ArrayList<News>, private val newsVi
             val binding = ItemNewsBinding.bind(view)
             binding.titleNewsItem.text = news.title
             binding.detailNewsItem.text = news.detail
-            binding.imageNewsItem.setImageURI(news.imageUrl.replace(" ","%20"))
+            binding.imageNewsItem.setImageURI(news.imageUrl.replace(" ", "%20"))
 
-            news.like.forEach { like->
-                if(like==0){
+            news.like.forEach { like ->
+                if (like == 0) {
 
                     return@forEach
                 }
@@ -43,8 +44,8 @@ class NewsAdapter(private val newsArrayList: ArrayList<News>, private val newsVi
 
         }
 
-        private fun setListener(news : News){
-            view.setOnClickListener{
+        private fun setListener(news: News) {
+            view.setOnClickListener {
                 newsViews.openDetail(news)
             }
         }

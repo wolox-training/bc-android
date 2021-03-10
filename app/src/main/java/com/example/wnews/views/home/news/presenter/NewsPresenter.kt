@@ -14,7 +14,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class NewsPresenter(val newsView: NewsView){
+class NewsPresenter(val newsView: NewsView) {
 
     var arrayListNews = arrayListOf<News>()
         private set
@@ -22,23 +22,28 @@ class NewsPresenter(val newsView: NewsView){
     var loading = false
         private set
 
-    fun saveAsFavorite(){}
+    fun saveAsFavorite() {}
 
-    fun clearArrayList(){
+    fun clearArrayList() {
         arrayListNews = arrayListOf()
     }
 
-    fun onResponseNews(page:Int,userAuth:UserAuth){
+    fun onResponseNews(page: Int, userAuth: UserAuth) {
         loading = true
         newsView.showProgressBar(loading)
 
 
-        val call: Call<ListNews> = RetrofitProvider.newsService.getNews(page,userAuth.token,userAuth.client,userAuth.uid)
+        val call: Call<ListNews> = RetrofitProvider.newsService.getNews(
+            page,
+            userAuth.token,
+            userAuth.client,
+            userAuth.uid
+        )
         call.enqueue(object : Callback<ListNews?> {
 
             override fun onResponse(
-                    call: Call<ListNews?>?,
-                    response: Response<ListNews?>?
+                call: Call<ListNews?>?,
+                response: Response<ListNews?>?
             ) {
 
                 if (response!!.isSuccessful) {
@@ -46,16 +51,16 @@ class NewsPresenter(val newsView: NewsView){
                     val items = response.body()
 
 
-                    if(!items!!.page.isNullOrEmpty()){
-                        items.page.forEach{ item ->
+                    if (!items!!.page.isNullOrEmpty()) {
+                        items.page.forEach { item ->
 
                             arrayListNews.add(
-                                    News(
-                                            item.newsId,
-                                            item.title,
-                                            item.detail,
-                                            item.imageUrl
-                                    )
+                                News(
+                                    item.newsId,
+                                    item.title,
+                                    item.detail,
+                                    item.imageUrl
+                                )
                             )
                         }
                     }

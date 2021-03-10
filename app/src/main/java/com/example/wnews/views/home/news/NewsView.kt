@@ -6,7 +6,7 @@ interface NewsView {
 
     fun changeData()
 
-    fun showProgressBar(isLoading:Boolean)
+    fun showProgressBar(isLoading: Boolean)
 
     fun openDetail(news: News)
 }

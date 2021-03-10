@@ -8,7 +8,8 @@ import com.example.wnews.views.home.news.NewsFragment
 import com.example.wnews.views.home.profile.ProfileFragment
 
 
-class HomePagerAdapter(fm: FragmentManager, lifecycle: Lifecycle, private var numberOfTabs: Int) : FragmentStateAdapter(fm, lifecycle) {
+class HomePagerAdapter(fm: FragmentManager, lifecycle: Lifecycle, private var numberOfTabs: Int) :
+    FragmentStateAdapter(fm, lifecycle) {
 
     override fun getItemCount(): Int {
         return numberOfTabs

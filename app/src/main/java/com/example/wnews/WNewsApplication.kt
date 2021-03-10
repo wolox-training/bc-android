@@ -6,9 +6,9 @@ import com.example.wnews.providers.RetrofitProvider
 import com.facebook.drawee.backends.pipeline.Fresco
 
 
-class WNewsApplication: Application() {
+class WNewsApplication : Application() {
 
-    private var context:Context? = null
+    private var context: Context? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -18,16 +18,16 @@ class WNewsApplication: Application() {
         instanceFresco()
     }
 
-    private fun instanceRetrofit(){
+    private fun instanceRetrofit() {
         RetrofitProvider.authService
         RetrofitProvider.newsService
     }
 
-    private fun instanceFresco(){
+    private fun instanceFresco() {
         Fresco.initialize(this)
     }
 
-    fun getContext():Context{
+    fun getContext(): Context {
         return context!!
     }
 

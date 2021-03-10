@@ -11,9 +11,19 @@ import retrofit2.http.Query
 interface NewsService {
 
     @GET("/comments")
-    fun getNews(@Query("page") page:Int , @Header("access-token") accessToken:String, @Header("client") client:String, @Header("uid") uid:String): Call<ListNews>
+    fun getNews(
+        @Query("page") page: Int,
+        @Header("access-token") accessToken: String,
+        @Header("client") client: String,
+        @Header("uid") uid: String
+    ): Call<ListNews>
 
     @GET("/comments/{id}")
-    fun getCommentDetail(@Path("id") id: Int, @Header("access-token") accessToken:String, @Header("client") client:String, @Header("uid") uid:String): Call<ListNews>
+    fun getCommentDetail(
+        @Path("id") id: Int,
+        @Header("access-token") accessToken: String,
+        @Header("client") client: String,
+        @Header("uid") uid: String
+    ): Call<ListNews>
 
 }

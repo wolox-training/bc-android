@@ -20,7 +20,7 @@ class UnauthorizedInterceptor : Interceptor {
 
             val prefs = PreferenceManager.getDefaultSharedPreferences(context)
 
-            if(AuthPresenter(prefs,null).isLoggedIn()) {
+            if (AuthPresenter(prefs, null).isLoggedIn()) {
 
                 AuthPresenter(prefs, null).killSession()
                 val intent = Intent(context, LoginActivity::class.java)
