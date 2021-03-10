@@ -1,4 +1,4 @@
-package com.example.wnews.v../../../../res/layout/fragment_detail.xmliews.auth.login
+package com.example.wnews.views.auth.login
 
 import android.content.Intent
 import android.net.Uri

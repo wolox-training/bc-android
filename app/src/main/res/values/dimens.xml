@@ -26,7 +26,7 @@
 
     <dimen name="font_medium">16sp</dimen>
 
-    <dimen name="font_large">20p</dimen>
+    <dimen name="font_large">20sp</dimen>
 
     <dimen name="font_extra_large">24sp</dimen>
 

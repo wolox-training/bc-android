@@ -4,7 +4,7 @@
     android:layout_height="100sp"
     xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:padding="@dimen/padding">
+    android:padding="@dimen/spacing_large">
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/image_news_item"
@@ -29,7 +29,7 @@
             android:lines="1"
             android:hint="@string/title_hint"
             android:textColor="@color/black"
-            android:textSize="@dimen/size_title_news"/>
+            android:textSize="@dimen/font_extra_large"/>
 
         <TextView
             android:id="@+id/detail_news_item"
@@ -41,6 +41,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/button_like_item"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

@@ -1,5 +1,6 @@
 package com.example.wnews.views.home.news
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
@@ -9,18 +10,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wnews.R
 import com.example.wnews.databinding.FragmentNewsBinding
+import com.example.wnews.models.News
 import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.views.home.news.adapter.NewsAdapter
+import com.example.wnews.views.home.news.detail.DetailActivity
 import com.example.wnews.views.home.news.presenter.NewsPresenter
+import com.google.gson.Gson
 
-
-class NewsFragment : Fragment(R.layout.fragment_news),NewsView {
+class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
     private var binding: FragmentNewsBinding? = null
     private var viewManager = LinearLayoutManager(context)
-    lateinit var newsPresenter:NewsPresenter
+    lateinit var newsPresenter: NewsPresenter
     var page = 1
-    lateinit var sPref:SharedPreferences
+    lateinit var sPref: SharedPreferences
     lateinit var authPresenter: AuthPresenter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,16 +35,16 @@ class NewsFragment : Fragment(R.layout.fragment_news),NewsView {
         setListener()
     }
 
-    private fun initialisePresenter(){
+    private fun initialisePresenter() {
         sPref = PreferenceManager.getDefaultSharedPreferences(context)
         authPresenter = AuthPresenter(sPref, null)
         newsPresenter = NewsPresenter(this)
         newsPresenter.onResponseNews(page, authPresenter.getUserAuth())
     }
 
-    private fun initialiseAdapter(){
+    private fun initialiseAdapter() {
         binding!!.recyclerViewNews.layoutManager = viewManager
-        binding!!.recyclerViewNews.adapter = NewsAdapter(newsPresenter.arrayListNews)
+        binding!!.recyclerViewNews.adapter = NewsAdapter(newsPresenter.arrayListNews, this)
     }
 
     override fun onDestroyView() {
@@ -49,8 +52,9 @@ class NewsFragment : Fragment(R.layout.fragment_news),NewsView {
         binding = null
     }
 
-    private fun setListener(){
-        binding!!.butttonAddNews.setOnClickListener{ }
+    private fun setListener() {
+
+        binding!!.butttonAddNews.setOnClickListener { }
 
         binding!!.recyclerViewNews.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
@@ -79,6 +83,7 @@ class NewsFragment : Fragment(R.layout.fragment_news),NewsView {
             newsPresenter.onResponseNews(++page, authPresenter.getUserAuth())
 
         }
+
     }
 
     override fun changeData() {
@@ -86,12 +91,24 @@ class NewsFragment : Fragment(R.layout.fragment_news),NewsView {
     }
 
     override fun showProgressBar(isLoading: Boolean) {
-        if(isLoading) {
+
+        if (isLoading) {
             binding!!.progressBarNews.visibility = View.VISIBLE
-        }else{
+        } else {
             binding!!.progressBarNews.visibility = View.GONE
-            binding!!.swipeNews.isRefreshing= false
+            binding!!.swipeNews.isRefreshing = false
         }
+
+    }
+
+    override fun openDetail(news: News) {
+
+        val intent = Intent(context, DetailActivity::class.java)
+        val gson = Gson()
+        val jsonNews = gson.toJson(news)
+        intent.putExtra("newsObject", jsonNews)
+        startActivity(intent)
+
     }
 
 }

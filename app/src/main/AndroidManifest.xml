@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WNews">
+        <activity android:name=".views.home.news.detail.DetailActivity"
+            android:label="@string/detail_label"
+            android:parentActivityName=".views.home.HomeActivity"/>
         <activity
             android:name=".RootActivity"
             android:noHistory="true">
@@ -32,10 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.main.MainActivity" />
-        <activity android:name=".views.home.HomeActivity"
-            android:label="@string/home_label"/>
-
+        <activity
+            android:name=".views.home.HomeActivity"
+            android:label="@string/home_label" />
     </application>
 
 </manifest>

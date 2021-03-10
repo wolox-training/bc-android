@@ -7,9 +7,13 @@ import com.facebook.drawee.backends.pipeline.Fresco
 
 
 class WNewsApplication: Application() {
+
+    private var context:Context? = null
+
     override fun onCreate() {
         super.onCreate()
 
+        context = applicationContext
         instanceRetrofit()
         instanceFresco()
     }
@@ -24,7 +28,7 @@ class WNewsApplication: Application() {
     }
 
     fun getContext():Context{
-        return this
+        return context!!
     }
 
 }

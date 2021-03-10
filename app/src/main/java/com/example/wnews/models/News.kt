@@ -2,6 +2,7 @@ package com.example.wnews.models
 
 
 import com.google.gson.annotations.SerializedName
+import org.json.JSONArray
 
 data class News(
 
@@ -15,5 +16,8 @@ data class News(
         var detail : String = "",
 
         @SerializedName("avatar")
-        var imageUrl : String = ""
+        var imageUrl : String = "",
+
+        @SerializedName("likes")
+        var like: List<Int> = listOf<Int>()
 )

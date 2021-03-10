@@ -4,12 +4,15 @@ import com.google.gson.annotations.SerializedName
 
 data class UserAuth(
 
-        @SerializedName("token")
-        var token:String = "token",
+    @SerializedName("id")
+    var userAuthId: Int = 0,
 
-        @SerializedName("client")
-        var client:String ="client",
+    @SerializedName("token")
+    var token: String = "token",
 
-        @SerializedName("uid")
-        var uid:String = "uid"
+    @SerializedName("client")
+    var client: String = "client",
+
+    @SerializedName("uid")
+    var uid: String = "uid"
 )
