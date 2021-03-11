@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_extra_large"
                 android:singleLine="true"
+                android:text="clinton.harris59@example.com"
                 android:inputType="textEmailAddress"
                 android:hint="@string/login_email_user"/>
 
@@ -49,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_extra_large"
+                android:text="123456"
                 android:inputType="textPassword"
                 android:hint="@string/login_password_user"/>
 

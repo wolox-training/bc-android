@@ -41,12 +41,20 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_like_item"
+        android:id="@+id/button_like_off_item"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableBottom="@drawable/ic_like_off"/>
+    <Button
+        android:id="@+id/button_like_on_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:drawableBottom="@drawable/ic_like_on"/>
 
 </LinearLayout>
 

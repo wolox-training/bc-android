@@ -1,15 +1,11 @@
 package com.example.wnews.views.home.news.presenter
 
-import android.util.Log
-import android.widget.Adapter
-import androidx.lifecycle.MutableLiveData
-import androidx.recyclerview.widget.RecyclerView
-import com.example.wnews.models.ListNews
+import com.example.wnews.models.LikeResponse
+import com.example.wnews.models.ListNewsResponse
 import com.example.wnews.models.News
 import com.example.wnews.models.UserAuth
 import com.example.wnews.providers.RetrofitProvider
 import com.example.wnews.views.home.news.NewsView
-import com.example.wnews.views.home.news.adapter.NewsAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,7 +18,45 @@ class NewsPresenter(val newsView: NewsView) {
     var loading = false
         private set
 
-    fun saveAsFavorite() {}
+    fun onResponseLike(comment: Int, userAuth: UserAuth) {
+        val call: Call<LikeResponse> = RetrofitProvider.newsService.putLike(
+            comment,
+            userAuth.token,
+            userAuth.client,
+            userAuth.uid
+        )
+        call.enqueue(object : Callback<LikeResponse?> {
+
+            override fun onResponse(
+                call: Call<LikeResponse?>?,
+                response: Response<LikeResponse?>?
+            ) {
+
+                if (response!!.isSuccessful) {
+
+                    val items = response.body()
+
+
+
+                } else if (response.errorBody() != null) {
+
+                }
+
+                loading = false
+
+                newsView.changeData()
+
+                newsView.showProgressBar(loading)
+
+            }
+
+            override fun onFailure(call: Call<LikeResponse?>?, t: Throwable?) {
+
+            }
+
+
+        })
+    }
 
     fun clearArrayList() {
         arrayListNews = arrayListOf()
@@ -33,17 +67,17 @@ class NewsPresenter(val newsView: NewsView) {
         newsView.showProgressBar(loading)
 
 
-        val call: Call<ListNews> = RetrofitProvider.newsService.getNews(
+        val call: Call<ListNewsResponse> = RetrofitProvider.newsService.getNews(
             page,
             userAuth.token,
             userAuth.client,
             userAuth.uid
         )
-        call.enqueue(object : Callback<ListNews?> {
+        call.enqueue(object : Callback<ListNewsResponse?> {
 
             override fun onResponse(
-                call: Call<ListNews?>?,
-                response: Response<ListNews?>?
+                call: Call<ListNewsResponse?>?,
+                response: Response<ListNewsResponse?>?
             ) {
 
                 if (response!!.isSuccessful) {
@@ -59,7 +93,8 @@ class NewsPresenter(val newsView: NewsView) {
                                     item.newsId,
                                     item.title,
                                     item.detail,
-                                    item.imageUrl
+                                    item.imageUrl,
+                                    item.like
                                 )
                             )
                         }
@@ -77,7 +112,7 @@ class NewsPresenter(val newsView: NewsView) {
 
             }
 
-            override fun onFailure(call: Call<ListNews?>?, t: Throwable?) {
+            override fun onFailure(call: Call<ListNewsResponse?>?, t: Throwable?) {
                 loading = false
 
             }

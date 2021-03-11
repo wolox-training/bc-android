@@ -2,10 +2,8 @@ package com.example.wnews.models
 
 import com.google.gson.annotations.SerializedName
 
-data class ListNews(
+data class LikeResponse(
 
-        @SerializedName("page")
-        var page: List<News>
-
-
+    @SerializedName("message")
+    var message: String
 )

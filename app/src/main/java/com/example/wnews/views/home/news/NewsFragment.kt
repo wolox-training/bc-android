@@ -9,8 +9,10 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wnews.R
+import com.example.wnews.UserProvider
 import com.example.wnews.databinding.FragmentNewsBinding
 import com.example.wnews.models.News
+import com.example.wnews.models.UserAuth
 import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.views.home.news.adapter.NewsAdapter
 import com.example.wnews.views.home.news.detail.DetailActivity
@@ -22,9 +24,8 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
     private var binding: FragmentNewsBinding? = null
     private var viewManager = LinearLayoutManager(context)
     lateinit var newsPresenter: NewsPresenter
-    var page = 1
-    lateinit var sPref: SharedPreferences
-    lateinit var authPresenter: AuthPresenter
+    private var page = 1
+    lateinit var userAuth: UserAuth
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,15 +37,15 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
     }
 
     private fun initialisePresenter() {
-        sPref = PreferenceManager.getDefaultSharedPreferences(context)
-        authPresenter = AuthPresenter(sPref, null)
+        userAuth = UserProvider.userAuth
         newsPresenter = NewsPresenter(this)
-        newsPresenter.onResponseNews(page, authPresenter.getUserAuth())
+        newsPresenter.onResponseNews(page, userAuth)
     }
 
     private fun initialiseAdapter() {
         binding!!.recyclerViewNews.layoutManager = viewManager
-        binding!!.recyclerViewNews.adapter = NewsAdapter(newsPresenter.arrayListNews, this)
+        binding!!.recyclerViewNews.adapter =
+            NewsAdapter(newsPresenter.arrayListNews, this, userAuth)
     }
 
     override fun onDestroyView() {
@@ -67,7 +68,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
                     if (!newsPresenter.loading) {
                         if (visibleItemCount + pastVisiblesItems >= totalItemCount - 10) {
-                            newsPresenter.onResponseNews(++page, authPresenter.getUserAuth())
+                            newsPresenter.onResponseNews(++page, userAuth)
                             binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
 
                         }
@@ -80,7 +81,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         binding!!.swipeNews.setOnRefreshListener {
             page = 1
             newsPresenter.clearArrayList()
-            newsPresenter.onResponseNews(++page, authPresenter.getUserAuth())
+            newsPresenter.onResponseNews(++page, userAuth)
 
         }
 
