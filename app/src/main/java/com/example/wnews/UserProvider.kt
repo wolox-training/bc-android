@@ -11,7 +11,7 @@ object UserProvider {
 
 
     fun isLoggedIn(): Boolean {
-        return userAuth.userAuthId == 0
+        return userAuth.userAuthId != 0
 
     }
 

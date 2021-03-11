@@ -15,7 +15,7 @@ class NewsPresenter(val newsView: NewsView) {
     var arrayListNews = arrayListOf<News>()
         private set
 
-    var loading = false
+    var isLoading = false
         private set
 
     fun onResponseLike(comment: Int, userAuth: UserAuth) {
@@ -42,11 +42,11 @@ class NewsPresenter(val newsView: NewsView) {
 
                 }
 
-                loading = false
+                isLoading = false
 
-                newsView.changeData()
+                newsView.onNewPageReceived()
 
-                newsView.showProgressBar(loading)
+                newsView.showProgressBar(isLoading)
 
             }
 
@@ -63,8 +63,8 @@ class NewsPresenter(val newsView: NewsView) {
     }
 
     fun onResponseNews(page: Int, userAuth: UserAuth) {
-        loading = true
-        newsView.showProgressBar(loading)
+        isLoading = true
+        newsView.showProgressBar(isLoading)
 
 
         val call: Call<ListNewsResponse> = RetrofitProvider.newsService.getNews(
@@ -104,16 +104,16 @@ class NewsPresenter(val newsView: NewsView) {
 
                 }
 
-                loading = false
+                isLoading = false
 
-                newsView.changeData()
+                newsView.onNewPageReceived()
 
-                newsView.showProgressBar(loading)
+                newsView.showProgressBar(isLoading)
 
             }
 
             override fun onFailure(call: Call<ListNewsResponse?>?, t: Throwable?) {
-                loading = false
+                isLoading = false
 
             }
 

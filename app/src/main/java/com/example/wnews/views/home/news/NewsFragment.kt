@@ -1,11 +1,10 @@
 package com.example.wnews.views.home.news
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.preference.PreferenceManager
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wnews.R
@@ -13,7 +12,6 @@ import com.example.wnews.UserProvider
 import com.example.wnews.databinding.FragmentNewsBinding
 import com.example.wnews.models.News
 import com.example.wnews.models.UserAuth
-import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.views.home.news.adapter.NewsAdapter
 import com.example.wnews.views.home.news.detail.DetailActivity
 import com.example.wnews.views.home.news.presenter.NewsPresenter
@@ -31,18 +29,23 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNewsBinding.bind(view)
 
-        initialisePresenter()
-        initialiseAdapter()
+        initializePresenter()
+        initializeAdapter()
         setListener()
     }
 
-    private fun initialisePresenter() {
+    private fun initializePresenter() {
         userAuth = UserProvider.userAuth
         newsPresenter = NewsPresenter(this)
         newsPresenter.onResponseNews(page, userAuth)
     }
 
-    private fun initialiseAdapter() {
+    private fun initializeAdapter() {
+
+        binding!!.recyclerViewNews.apply {
+            addItemDecoration(DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL))
+        }
+
         binding!!.recyclerViewNews.layoutManager = viewManager
         binding!!.recyclerViewNews.adapter =
             NewsAdapter(newsPresenter.arrayListNews, this, userAuth)
@@ -55,8 +58,6 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
     private fun setListener() {
 
-        binding!!.butttonAddNews.setOnClickListener { }
-
         binding!!.recyclerViewNews.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -66,7 +67,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
                     val totalItemCount = viewManager.itemCount
                     val pastVisiblesItems = viewManager.findFirstVisibleItemPosition()
 
-                    if (!newsPresenter.loading) {
+                    if (!newsPresenter.isLoading) {
                         if (visibleItemCount + pastVisiblesItems >= totalItemCount - 10) {
                             newsPresenter.onResponseNews(++page, userAuth)
                             binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
@@ -74,7 +75,6 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
                         }
                     }
                 }
-
             }
         })
 
@@ -87,7 +87,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
     }
 
-    override fun changeData() {
+    override fun onNewPageReceived() {
         binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
     }
 

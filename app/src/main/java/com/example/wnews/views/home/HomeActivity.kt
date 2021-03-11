@@ -16,10 +16,10 @@ class HomeActivity : AppCompatActivity(R.layout.activity_home) {
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
 
-        inicialiteTabAdapter()
+        initializeTabAdapter()
     }
 
-    private fun inicialiteTabAdapter() {
+    private fun initializeTabAdapter() {
         val numberOfTabs = 2
 
         binding.tabLayoutHome.tabMode = TabLayout.MODE_FIXED

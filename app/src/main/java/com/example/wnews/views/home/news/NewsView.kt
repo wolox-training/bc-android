@@ -4,7 +4,7 @@ import com.example.wnews.models.News
 
 interface NewsView {
 
-    fun changeData()
+    fun onNewPageReceived()
 
     fun showProgressBar(isLoading: Boolean)
 

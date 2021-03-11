@@ -2,8 +2,8 @@ package com.example.wnews.services
 
 import android.content.Intent
 import androidx.preference.PreferenceManager
+import com.example.wnews.UserProvider
 import com.example.wnews.WNewsApplication
-import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.views.auth.login.LoginActivity
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -18,11 +18,12 @@ class UnauthorizedInterceptor : Interceptor {
 
             val context = WNewsApplication().getContext()
 
-            val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+            val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-            if (AuthPresenter(prefs, null).isLoggedIn()) {
+            if (UserProvider.isLoggedIn()) {
 
-                AuthPresenter(prefs, null).killSession()
+                UserProvider.killSession(sharedPreferences)
+                
                 val intent = Intent(context, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
                 context.startActivity(intent)

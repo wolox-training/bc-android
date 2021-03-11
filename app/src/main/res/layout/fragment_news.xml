@@ -10,12 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="50dp"
-        android:clipToPadding="false"
-        android:id="@+id/recycler_view_news"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="50dp" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
@@ -23,16 +23,15 @@
         android:id="@+id/progress_bar_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"/>
+        android:layout_gravity="center|bottom" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/buttton_add_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:src="@drawable/ic_baseline_add_24"
-        android:layout_margin="@dimen/spacing_large" />
-
+        android:layout_margin="@dimen/spacing_large"
+        android:src="@drawable/ic_baseline_add_24" />
 
 
 </FrameLayout>

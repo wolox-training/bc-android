@@ -8,9 +8,6 @@
     tools:context=".views.home.HomeActivity">
 
 
-
-
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout_home"
         android:layout_width="match_parent"
@@ -24,6 +21,6 @@
         android:id="@+id/view_pager_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
 </LinearLayout>

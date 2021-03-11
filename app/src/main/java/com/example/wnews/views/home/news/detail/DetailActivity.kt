@@ -19,7 +19,6 @@ class DetailActivity : AppCompatActivity(R.layout.activity_detail) {
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
-                setReorderingAllowed(true)
                 add<DetailFragment>(R.id.fragment_container_detail_view)
             }
         }

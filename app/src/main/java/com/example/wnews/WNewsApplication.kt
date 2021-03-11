@@ -15,18 +15,19 @@ class WNewsApplication : Application() {
         super.onCreate()
 
         context = applicationContext
-        intanceUserPreference()
-        instanceRetrofit()
-        instanceFresco()
+        initializeUserPreference()
+        initializeRetrofit()
+        initializeFresco()
     }
 
-    private fun instanceRetrofit() {
+    private fun initializeRetrofit() {
 
         RetrofitProvider.authService
         RetrofitProvider.newsService
+
     }
 
-    private fun instanceFresco() {
+    private fun initializeFresco() {
         Fresco.initialize(this)
     }
 
@@ -35,7 +36,8 @@ class WNewsApplication : Application() {
 
     }
 
-    private fun intanceUserPreference() {
+    private fun initializeUserPreference() {
+        
         val sharedPreference = PreferenceManager.getDefaultSharedPreferences(this)
         UserProvider.intanceUserAuth(sharedPreference)
 
