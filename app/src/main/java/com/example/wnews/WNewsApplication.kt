@@ -14,11 +14,13 @@ class WNewsApplication : Application() {
         super.onCreate()
 
         context = applicationContext
+
         instanceRetrofit()
         instanceFresco()
     }
 
     private fun instanceRetrofit() {
+
         RetrofitProvider.authService
         RetrofitProvider.newsService
     }
@@ -29,6 +31,7 @@ class WNewsApplication : Application() {
 
     fun getContext(): Context {
         return context!!
+
     }
 
 }

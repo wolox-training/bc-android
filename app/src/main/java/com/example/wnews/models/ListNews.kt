@@ -7,4 +7,5 @@ data class ListNews(
         @SerializedName("page")
         var page: List<News>
 
+
 )

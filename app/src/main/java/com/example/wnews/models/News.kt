@@ -19,4 +19,5 @@ data class News(
 
         @SerializedName("likes")
         var like: List<Int> = listOf()
+
 )

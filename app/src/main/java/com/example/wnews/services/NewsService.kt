@@ -26,4 +26,5 @@ interface NewsService {
         @Header("uid") uid: String
     ): Call<ListNews>
 
+
 }

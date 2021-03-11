@@ -15,4 +15,5 @@ data class UserAuth(
 
     @SerializedName("uid")
     var uid: String = "uid"
+
 )

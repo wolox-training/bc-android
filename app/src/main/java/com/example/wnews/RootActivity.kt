@@ -21,6 +21,7 @@ class RootActivity : Activity() {
             false -> startActivity(Intent(this, LoginActivity::class.java))
             true -> startActivity(Intent(this, HomeActivity::class.java))
 
+
         }
     }
 }
