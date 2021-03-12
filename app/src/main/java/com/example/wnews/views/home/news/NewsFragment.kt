@@ -71,7 +71,6 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
                     if (!NewsPresenter.isLoading) {
                         if (visibleItemCount + pastVisiblesItems >= totalItemCount - 10) {
                             NewsPresenter.onResponseNews(++page, userAuth, this@NewsFragment)
-                            binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
 
                         }
                     }
@@ -108,17 +107,13 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         val intent = Intent(context, DetailActivity::class.java)
         val gson = Gson()
         val jsonNews = gson.toJson(news)
-        intent.putExtra("newsObject", jsonNews)
+        intent.putExtra(DetailActivity.INTENT_EXTRA_NEWS, jsonNews)
         startActivity(intent)
 
     }
 
     override fun onClickLike(newsId: Int) {
-        NewsPresenter.onResponseLike(newsId, userAuth, this)
-    }
-
-    override fun onSuccessResponse(message: String, newsId: Int) {
-        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
+        NewsPresenter.onResponseUpdateNewsLike(newsId, userAuth, this)
 
         val newsLike = NewsPresenter.arrayListNews.find { it.newsId == newsId }
 
@@ -127,7 +122,19 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         } else {
             listOf()
         }
+    }
 
+    override fun onSuccessResponse(message: String, newsId: Int) {
+        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
+
+      /*  val newsLike = NewsPresenter.arrayListNews.find { it.newsId == newsId }
+
+        newsLike!!.like = if (newsLike.like.isEmpty()) {
+            listOf(userAuth.userAuthId)
+        } else {
+            listOf()
+        }
+*/
     }
 
     override fun onFailureResponse(message: String) {

@@ -56,7 +56,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
         }
 
         binding!!.imageButtonLikeDetail.setOnClickListener {
-            NewsPresenter.onResponseLike(newsObject.newsId, userAuth, this)
+            NewsPresenter.onResponseUpdateNewsLike(newsObject.newsId, userAuth, this)
         }
     }
 

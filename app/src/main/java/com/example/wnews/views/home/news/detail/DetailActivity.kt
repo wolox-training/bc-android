@@ -15,13 +15,17 @@ class DetailActivity : AppCompatActivity(R.layout.activity_detail) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        newsObject = Gson().fromJson(intent.getStringExtra("newsObject")!!, News::class.java)
+        newsObject = Gson().fromJson(intent.getStringExtra(INTENT_EXTRA_NEWS)!!, News::class.java)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 add<DetailFragment>(R.id.fragment_container_detail_view)
             }
         }
+    }
+
+    companion object{
+        const val INTENT_EXTRA_NEWS = "INTENT_EXTRA_NEWS"
     }
 
 }

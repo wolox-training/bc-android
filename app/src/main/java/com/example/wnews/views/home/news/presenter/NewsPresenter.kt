@@ -18,7 +18,7 @@ object NewsPresenter {
     var isLoading = false
         private set
 
-    fun onResponseLike(newsId: Int, userAuth: UserAuth, newsView: NewsView) {
+    fun onResponseUpdateNewsLike(newsId: Int, userAuth: UserAuth, newsView: NewsView) {
         val call: Call<LikeResponse> = RetrofitProvider.newsService.putLike(
             newsId,
             userAuth.token,
