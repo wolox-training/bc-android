@@ -1,13 +1,11 @@
 package com.example.wnews.views.auth
 
 import android.content.SharedPreferences
-import android.util.Log
 import com.example.wnews.UserProvider
-import com.example.wnews.models.UserAuthResponse
 import com.example.wnews.models.User
 import com.example.wnews.models.UserAuth
+import com.example.wnews.models.UserAuthResponse
 import com.example.wnews.providers.RetrofitProvider
-import com.google.gson.Gson
 import okhttp3.Headers
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,7 +37,7 @@ class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
                         uid = user.email
                     }
 
-                    UserProvider.saveUserAuth(userAuth,sharedPref)
+                    UserProvider.saveUserAuth(userAuth, sharedPref)
 
                     view!!.onAuthResponse(response.code())
 
@@ -52,15 +50,12 @@ class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
             }
 
             override fun onFailure(call: Call<UserAuthResponse?>?, t: Throwable?) {
-                Log.d("ResponseError", t!!.message.toString())
                 view!!.onAuthResponse(0)
             }
 
 
         })
     }
-
-
 
 
 }

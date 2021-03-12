@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -10,9 +10,6 @@
         android:layout_height="0dp"
         android:layout_weight="3">
 
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/bg_imageUrl"
@@ -20,13 +17,34 @@
             android:layout_height="match_parent"
             android:layout_gravity="top"
             android:scaleType="center"
-            fresco:placeholderImage="@drawable/img"
-            fresco:failureImage="@drawable/img"/>
+            fresco:failureImage="@drawable/img"
+            fresco:placeholderImage="@drawable/img" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/image_button_back_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_huge"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
 
     </RelativeLayout>
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
@@ -37,26 +55,32 @@
             android:id="@+id/text_view_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/font_huge"
             android:text="@string/title_hint"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_huge"
+            fresco:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text_view_detail"
             android:layout_width="match_parent"
-            android:textSize="@dimen/font_large"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_large"
             android:text="@string/detail_hint"
-            android:layout_height="wrap_content"/>
+            android:textSize="@dimen/font_large"
+            fresco:layout_constraintTop_toBottomOf="@id/text_view_title" />
 
-        <Button
-            android:id="@+id/button_like_detail"
+        <ImageButton
+            android:id="@+id/image_button_like_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:drawableBottom="@drawable/ic_like_off"/>
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_like_off"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toBottomOf="@id/text_view_detail" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

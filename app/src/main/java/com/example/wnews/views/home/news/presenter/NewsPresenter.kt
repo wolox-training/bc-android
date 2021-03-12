@@ -1,5 +1,6 @@
 package com.example.wnews.views.home.news.presenter
 
+import androidx.recyclerview.widget.RecyclerView
 import com.example.wnews.models.LikeResponse
 import com.example.wnews.models.ListNewsResponse
 import com.example.wnews.models.News
@@ -10,17 +11,16 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class NewsPresenter(val newsView: NewsView) {
+object NewsPresenter {
 
     var arrayListNews = arrayListOf<News>()
-        private set
 
     var isLoading = false
         private set
 
-    fun onResponseLike(comment: Int, userAuth: UserAuth) {
+    fun onResponseLike(newsId: Int, userAuth: UserAuth, newsView: NewsView) {
         val call: Call<LikeResponse> = RetrofitProvider.newsService.putLike(
-            comment,
+            newsId,
             userAuth.token,
             userAuth.client,
             userAuth.uid
@@ -34,26 +34,19 @@ class NewsPresenter(val newsView: NewsView) {
 
                 if (response!!.isSuccessful) {
 
-                    val items = response.body()
-
-
+                    newsView.onSuccessResponse(response.body()!!.message, newsId)
 
                 } else if (response.errorBody() != null) {
-
+                    newsView.onFailureResponse(response.message())
                 }
 
-                isLoading = false
-
                 newsView.onNewPageReceived()
-
-                newsView.showProgressBar(isLoading)
 
             }
 
             override fun onFailure(call: Call<LikeResponse?>?, t: Throwable?) {
-
+                newsView.onFailureResponse("")
             }
-
 
         })
     }
@@ -62,10 +55,12 @@ class NewsPresenter(val newsView: NewsView) {
         arrayListNews = arrayListOf()
     }
 
-    fun onResponseNews(page: Int, userAuth: UserAuth) {
+    fun onResponseNews(page: Int, userAuth: UserAuth, newsView: NewsView) {
         isLoading = true
-        newsView.showProgressBar(isLoading)
 
+        if(page!=1) {
+            newsView.showProgressBar(isLoading)
+        }
 
         val call: Call<ListNewsResponse> = RetrofitProvider.newsService.getNews(
             page,
@@ -101,22 +96,20 @@ class NewsPresenter(val newsView: NewsView) {
                     }
 
                 } else if (response.errorBody() != null) {
-
+                    newsView.onFailureResponse(response.message())
                 }
 
                 isLoading = false
-
                 newsView.onNewPageReceived()
-
                 newsView.showProgressBar(isLoading)
 
             }
 
             override fun onFailure(call: Call<ListNewsResponse?>?, t: Throwable?) {
+                newsView.onFailureResponse("")
                 isLoading = false
 
             }
-
 
         })
     }

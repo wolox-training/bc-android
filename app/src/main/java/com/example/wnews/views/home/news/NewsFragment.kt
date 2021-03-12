@@ -15,20 +15,22 @@ import com.example.wnews.models.UserAuth
 import com.example.wnews.views.home.news.adapter.NewsAdapter
 import com.example.wnews.views.home.news.detail.DetailActivity
 import com.example.wnews.views.home.news.presenter.NewsPresenter
+import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 
 class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
     private var binding: FragmentNewsBinding? = null
     private var viewManager = LinearLayoutManager(context)
-    lateinit var newsPresenter: NewsPresenter
     private var page = 1
     lateinit var userAuth: UserAuth
+    lateinit var newView: View
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNewsBinding.bind(view)
 
+        newView = view
         initializePresenter()
         initializeAdapter()
         setListener()
@@ -36,8 +38,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
     private fun initializePresenter() {
         userAuth = UserProvider.userAuth
-        newsPresenter = NewsPresenter(this)
-        newsPresenter.onResponseNews(page, userAuth)
+        NewsPresenter.onResponseNews(page, userAuth, this)
     }
 
     private fun initializeAdapter() {
@@ -48,7 +49,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
         binding!!.recyclerViewNews.layoutManager = viewManager
         binding!!.recyclerViewNews.adapter =
-            NewsAdapter(newsPresenter.arrayListNews, this, userAuth)
+            NewsAdapter(NewsPresenter.arrayListNews, this, userAuth)
     }
 
     override fun onDestroyView() {
@@ -67,9 +68,9 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
                     val totalItemCount = viewManager.itemCount
                     val pastVisiblesItems = viewManager.findFirstVisibleItemPosition()
 
-                    if (!newsPresenter.isLoading) {
+                    if (!NewsPresenter.isLoading) {
                         if (visibleItemCount + pastVisiblesItems >= totalItemCount - 10) {
-                            newsPresenter.onResponseNews(++page, userAuth)
+                            NewsPresenter.onResponseNews(++page, userAuth, this@NewsFragment)
                             binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
 
                         }
@@ -80,8 +81,8 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
         binding!!.swipeNews.setOnRefreshListener {
             page = 1
-            newsPresenter.clearArrayList()
-            newsPresenter.onResponseNews(++page, userAuth)
+            NewsPresenter.clearArrayList()
+            NewsPresenter.onResponseNews(++page, userAuth, this)
 
         }
 
@@ -110,6 +111,33 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         intent.putExtra("newsObject", jsonNews)
         startActivity(intent)
 
+    }
+
+    override fun onClickLike(newsId: Int) {
+        NewsPresenter.onResponseLike(newsId, userAuth, this)
+    }
+
+    override fun onSuccessResponse(message: String, newsId: Int) {
+        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
+
+        val newsLike = NewsPresenter.arrayListNews.find { it.newsId == newsId }
+
+        newsLike!!.like = if (newsLike.like.isEmpty()) {
+            listOf(userAuth.userAuthId)
+        } else {
+            listOf()
+        }
+
+    }
+
+    override fun onFailureResponse(message: String) {
+        val newMessage = if (message.isEmpty()) {
+            getString(R.string.server_error)
+        } else {
+            message
+        }
+
+        Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
     }
 
 }

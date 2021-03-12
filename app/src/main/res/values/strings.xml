@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">WNews</string>
+    <string name="server_error">Server error. Try again later.</string>
+
 
     <!-- Login -->
     <string name="login_email_error">It is not an email</string>
     <string name="login_mail_missing">Mail is missing</string>
     <string name="login_password_missing">Password is missing</string>
     <string name="login_fail_login">Invalid email or password</string>
-    <string name="login_server_error">Server error. Try again later.</string>
 
     <string name="login_terms">By joining you agree to our Terms and Conditions</string>
     <string name="login_email_user">Email</string>

@@ -89,7 +89,7 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
 
             200->startActivity(Intent(context, HomeActivity::class.java))
             401->binding!!.textviewMessageError.text = getString(R.string.login_fail_login)
-            0  ->binding!!.textviewMessageError.text = getString(R.string.login_server_error)
+            0  ->binding!!.textviewMessageError.text = getString(R.string.server_error)
 
         }
     }

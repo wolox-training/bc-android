@@ -15,15 +15,7 @@ interface NewsService {
         @Header("uid") uid: String
     ): Call<ListNewsResponse>
 
-    @GET("/comments/{id}")
-    fun getCommentDetail(
-        @Path("id") id: Int,
-        @Header("access-token") accessToken: String,
-        @Header("client") client: String,
-        @Header("uid") uid: String
-    ): Call<ListNewsResponse>
-
-    @PUT("comments/likes/{id}")
+    @PUT("comments/like/{id}")
     fun putLike(
         @Path("id") id: Int,
         @Header("access-token") accessToken: String,

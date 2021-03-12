@@ -36,22 +36,26 @@ class NewsAdapter(
             val binding = ItemNewsBinding.bind(view)
             binding.titleNewsItem.text = news.title
             binding.detailNewsItem.text = news.detail
-            //binding.imageNewsItem.setImageURI(news.imageUrl.replace(" ", "%20"))
-            binding.buttonLikeOffItem.visibility = View.VISIBLE
-            binding.buttonLikeOnItem.visibility = View.GONE
+
+            binding.imageButtonLikeItem.setImageResource(R.drawable.ic_like_off)
 
             news.like.forEach { like ->
                 if (like == user.userAuthId) {
-                    binding.buttonLikeOffItem.visibility = View.GONE
-                    binding.buttonLikeOnItem.visibility = View.VISIBLE
+                    binding.imageButtonLikeItem.setImageResource(R.drawable.ic_like_on)
                     return@forEach
                 }
             }
-            setListener(news)
+
+            setListener(news, binding)
 
         }
 
-        private fun setListener(news: News) {
+        private fun setListener(news: News, binding: ItemNewsBinding) {
+
+            binding.imageButtonLikeItem.setOnClickListener {
+                newsViews.onClickLike(news.newsId)
+            }
+
             view.setOnClickListener {
                 newsViews.openDetail(news)
             }

@@ -40,22 +40,14 @@
             android:lines="2" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_like_off_item"
+    <ImageButton
+        android:id="@+id/image_button_like_item"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:background="@android:color/transparent"
-        android:drawableBottom="@drawable/ic_like_off" />
-
-    <Button
-        android:id="@+id/button_like_on_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@android:color/transparent"
-        android:drawableBottom="@drawable/ic_like_on"
-        android:visibility="gone" />
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_like_off" />
 
 </LinearLayout>
 
