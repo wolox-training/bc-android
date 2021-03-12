@@ -18,7 +18,11 @@ object UserProvider {
     fun intanceUserAuth(sharedPreferences: SharedPreferences) {
 
         val sharedPrefString = sharedPreferences.getString("UserAuth", "")
-        userAuth = Gson().fromJson(sharedPrefString, UserAuth::class.java)
+        userAuth = if (sharedPrefString!!.isEmpty()) {
+            UserAuth()
+        } else {
+            Gson().fromJson(sharedPrefString, UserAuth::class.java)
+        }
 
     }
 
@@ -35,7 +39,7 @@ object UserProvider {
     fun killSession(sharedPreferences: SharedPreferences) {
 
         val editor = sharedPreferences.edit()
-        editor.putString("UserAuth", "")
+        editor.putString("UserAuth", UserAuth().toString())
         editor.apply()
 
         userAuth = UserAuth()
