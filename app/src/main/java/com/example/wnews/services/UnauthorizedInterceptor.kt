@@ -23,7 +23,7 @@ class UnauthorizedInterceptor : Interceptor {
             if (UserProvider.isLoggedIn()) {
 
                 UserProvider.killSession(sharedPreferences)
-                
+
                 val intent = Intent(context, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
                 context.startActivity(intent)

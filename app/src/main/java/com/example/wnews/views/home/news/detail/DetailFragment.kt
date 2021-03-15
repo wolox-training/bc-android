@@ -1,5 +1,7 @@
 package com.example.wnews.views.home.news.detail
 
+import android.app.Activity.RESULT_OK
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -9,78 +11,77 @@ import com.example.wnews.databinding.FragmentDetailBinding
 import com.example.wnews.models.News
 import com.example.wnews.models.UserAuth
 import com.example.wnews.views.home.news.NewsView
-import com.example.wnews.views.home.news.presenter.NewsPresenter
+import com.example.wnews.views.home.news.detail.presenter.DetailPresenter
 import com.google.android.material.snackbar.Snackbar
 
 
 class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
 
     private var binding: FragmentDetailBinding? = null
-    lateinit var newsObject: News
-    lateinit var userAuth: UserAuth
-    lateinit var newView: View
+    private lateinit var newView: View
+    private lateinit var userAuth: UserAuth
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentDetailBinding.bind(view)
 
         newView = view
+
         val activity: DetailActivity? = activity as DetailActivity?
-        newsObject = activity!!.newsObject
+
+        val intentNewsId = activity!!.newsId
+
+        val news =
+            DetailPresenter().arrayListNews.find { it.newsId == intentNewsId }
 
         initializeProvider()
-        setContent()
-        setListener()
+        setContent(news)
+        setListener(news)
     }
 
     private fun initializeProvider() {
         userAuth = UserProvider.userAuth
     }
 
-    private fun setContent() {
-        binding!!.textViewTitle.text = newsObject.title
-        binding!!.textViewDetail.text = newsObject.detail
+    private fun setContent(news: News?) {
+        binding!!.textViewTitle.text = news!!.title
+        binding!!.textViewDetail.text = news.detail
+        binding!!.bgImageUrl.setImageURI(news.imageUrl)
 
-        newsObject.like.forEach { like ->
-            if (like == userAuth.userAuthId) {
-                binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_on)
-                return@forEach
-            }
+        if (DetailPresenter().isUserLikeNews(news.like)) {
+            binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_on)
         }
     }
 
-    private fun setListener() {
+    private fun setListener(news: News?) {
 
         binding!!.imageButtonBackDetail.setOnClickListener {
-            requireActivity().onBackPressed()
+            val intent = Intent()
+            requireActivity().setResult(RESULT_OK, intent)
+            requireActivity().finish()
         }
 
         binding!!.imageButtonLikeDetail.setOnClickListener {
-            NewsPresenter.onResponseUpdateNewsLike(newsObject.newsId, userAuth, this)
+
+            val newsToUpdateLike =
+                DetailPresenter().arrayListNews.find { it.newsId == news!!.newsId }
+
+
+            if (DetailPresenter().isUserLikeNews(newsToUpdateLike!!.like)) {
+
+                newsToUpdateLike.like = newsToUpdateLike.like.filter { it != userAuth.userAuthId }
+                binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_off)
+
+            } else {
+                newsToUpdateLike.like = newsToUpdateLike.like.plusElement(userAuth.userAuthId)
+                binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_on)
+            }
+
+            DetailPresenter().onResponseUpdateNewsLike(news!!.newsId, this)
         }
     }
 
-    override fun onNewPageReceived() {}
-
-    override fun showProgressBar(isLoading: Boolean) {}
-
-    override fun openDetail(news: News) {}
-
-    override fun onClickLike(newsId: Int) {}
-
-    override fun onSuccessResponse(message: String, newsId: Int) {
-        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
-
-        val newsLike = NewsPresenter.arrayListNews.find { it.newsId == newsId }
-
-        if (newsLike!!.like.isEmpty()) {
-            newsLike.like = listOf(userAuth.userAuthId)
-            binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_on)
-        } else {
-            newsLike.like = listOf()
-            binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_off)
-        }
-    }
+    override fun onSuccessResponse() {}
 
     override fun onFailureResponse(message: String) {
         val newMessage = if (message.isEmpty()) {
@@ -91,4 +92,19 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
 
         Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
     }
+
+
+    /*NOT IMPLEMENTED*/
+
+    override fun initAdapter() {}
+
+    override fun onNewPageReceived() {}
+
+    override fun showProgressBar(isLoading: Boolean) {}
+
+    override fun openDetail(news: News) {}
+
+    override fun onClickLike(newsId: Int) {}
+
+
 }

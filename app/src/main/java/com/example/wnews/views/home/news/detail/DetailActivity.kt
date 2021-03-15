@@ -2,20 +2,19 @@ package com.example.wnews.views.home.news.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.*
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.example.wnews.R
-import com.example.wnews.models.News
-import com.google.gson.Gson
 
 class DetailActivity : AppCompatActivity(R.layout.activity_detail) {
 
-    lateinit var newsObject: News
+    var newsId: Int = 0
         private set
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        newsObject = Gson().fromJson(intent.getStringExtra(INTENT_EXTRA_NEWS)!!, News::class.java)
+        newsId = intent.getIntExtra(INTENT_EXTRA_ID_NEWS, 0)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
@@ -24,8 +23,8 @@ class DetailActivity : AppCompatActivity(R.layout.activity_detail) {
         }
     }
 
-    companion object{
-        const val INTENT_EXTRA_NEWS = "INTENT_EXTRA_NEWS"
+    companion object {
+        const val INTENT_EXTRA_ID_NEWS = "INTENT_EXTRA_NEWS"
     }
 
 }

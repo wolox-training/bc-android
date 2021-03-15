@@ -5,15 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wnews.R
+import com.example.wnews.UserProvider
 import com.example.wnews.databinding.ItemNewsBinding
 import com.example.wnews.models.News
-import com.example.wnews.models.UserAuth
 import com.example.wnews.views.home.news.NewsView
 
 class NewsAdapter(
     private val newsArrayList: ArrayList<News>,
     private val newsViews: NewsView,
-    private val user: UserAuth
 ) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
@@ -37,10 +36,12 @@ class NewsAdapter(
             binding.titleNewsItem.text = news.title
             binding.detailNewsItem.text = news.detail
 
+            binding.imageNewsItem.setImageURI(news.imageUrl)
+
             binding.imageButtonLikeItem.setImageResource(R.drawable.ic_like_off)
 
             news.like.forEach { like ->
-                if (like == user.userAuthId) {
+                if (like == UserProvider.userAuth.userAuthId) {
                     binding.imageButtonLikeItem.setImageResource(R.drawable.ic_like_on)
                     return@forEach
                 }
@@ -60,5 +61,7 @@ class NewsAdapter(
                 newsViews.openDetail(news)
             }
         }
+
+
     }
 }

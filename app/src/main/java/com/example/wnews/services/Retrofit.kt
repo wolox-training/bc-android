@@ -11,8 +11,8 @@ class Retrofit {
     private var retrofit: Retrofit? = null
 
     private var client = OkHttpClient.Builder()
-            .addInterceptor(UnauthorizedInterceptor())
-            .build()
+        .addInterceptor(UnauthorizedInterceptor())
+        .build()
 
     fun requestService(): Retrofit? {
         if (retrofit == null) {

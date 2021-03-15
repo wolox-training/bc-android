@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-//    apply 'com.diffplug.gradle.spotless'
 
 }
 
@@ -64,4 +63,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 
     implementation 'com.facebook.fresco:fresco:2.4.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
 }

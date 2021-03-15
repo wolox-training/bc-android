@@ -15,8 +15,7 @@
         android:theme="@style/Theme.WNews">
         <activity
             android:name=".views.home.news.detail.DetailActivity"
-            android:label="@string/detail_label"
-            android:parentActivityName=".views.home.HomeActivity" />
+            android:theme="@style/Theme.WNews.NoActionBar" />
         <activity
             android:name=".RootActivity"
             android:noHistory="true">
@@ -29,10 +28,12 @@
         <activity android:name=".views.auth.signup.SignUpActivity" />
         <activity
             android:name=".views.auth.login.LoginActivity"
-            android:theme="@style/Theme.WNews.NoActionBar"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:theme="@style/Theme.WNews.NoActionBar" />
         <activity
             android:name=".views.home.HomeActivity"
+
+            android:theme="@style/Theme.WNews.NoActionBar"
             android:label="@string/home_label" />
     </application>
 

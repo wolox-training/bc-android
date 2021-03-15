@@ -1,8 +1,9 @@
 package com.example.wnews.views.auth.login
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.example.wnews.R
 
 class LoginActivity : AppCompatActivity(R.layout.activity_login) {

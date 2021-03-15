@@ -7,6 +7,27 @@
     android:orientation="vertical"
     tools:context=".views.home.HomeActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_medium"
+            android:src="@drawable/wolox_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_medium"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_extra_large"
+            android:textColor="@color/black"
+            android:text="@string/wolox" />
+
+    </androidx.appcompat.widget.Toolbar>
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout_home"

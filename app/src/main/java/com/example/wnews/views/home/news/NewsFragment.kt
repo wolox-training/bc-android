@@ -16,7 +16,6 @@ import com.example.wnews.views.home.news.adapter.NewsAdapter
 import com.example.wnews.views.home.news.detail.DetailActivity
 import com.example.wnews.views.home.news.presenter.NewsPresenter
 import com.google.android.material.snackbar.Snackbar
-import com.google.gson.Gson
 
 class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
@@ -31,25 +30,37 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         binding = FragmentNewsBinding.bind(view)
 
         newView = view
-        initializePresenter()
-        initializeAdapter()
+        initPresenter()
+        initializeSkeleton()
+        initAdapter()
+        setDesign()
         setListener()
+
     }
 
-    private fun initializePresenter() {
+    private fun initializeSkeleton() {
+        binding!!.shimmerFrameLayout.showShimmer(true)
+    }
+
+    private fun initPresenter() {
         userAuth = UserProvider.userAuth
-        NewsPresenter.onResponseNews(page, userAuth, this)
+        NewsPresenter().initProvider(userAuth, this)
+        NewsPresenter().onResponseNews(page)
     }
 
-    private fun initializeAdapter() {
-
+    private fun setDesign() {
         binding!!.recyclerViewNews.apply {
             addItemDecoration(DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL))
         }
 
+    }
+
+    override fun initAdapter() {
+
         binding!!.recyclerViewNews.layoutManager = viewManager
         binding!!.recyclerViewNews.adapter =
-            NewsAdapter(NewsPresenter.arrayListNews, this, userAuth)
+            NewsAdapter(NewsProvider.arrayListNews, this)
+
     }
 
     override fun onDestroyView() {
@@ -68,10 +79,9 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
                     val totalItemCount = viewManager.itemCount
                     val pastVisiblesItems = viewManager.findFirstVisibleItemPosition()
 
-                    if (!NewsPresenter.isLoading) {
+                    if (!NewsPresenter().isLoading) {
                         if (visibleItemCount + pastVisiblesItems >= totalItemCount - 10) {
-                            NewsPresenter.onResponseNews(++page, userAuth, this@NewsFragment)
-
+                            NewsPresenter().onResponseNews(++page)
                         }
                     }
                 }
@@ -80,9 +90,7 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
         binding!!.swipeNews.setOnRefreshListener {
             page = 1
-            NewsPresenter.clearArrayList()
-            NewsPresenter.onResponseNews(++page, userAuth, this)
-
+            NewsPresenter().onResponseNews(page)
         }
 
     }
@@ -96,48 +104,51 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         if (isLoading) {
             binding!!.progressBarNews.visibility = View.VISIBLE
         } else {
+            binding!!.shimmerFrameLayout.visibility = View.GONE
             binding!!.progressBarNews.visibility = View.GONE
             binding!!.swipeNews.isRefreshing = false
         }
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
+    }
+
     override fun openDetail(news: News) {
 
         val intent = Intent(context, DetailActivity::class.java)
-        val gson = Gson()
-        val jsonNews = gson.toJson(news)
-        intent.putExtra(DetailActivity.INTENT_EXTRA_NEWS, jsonNews)
-        startActivity(intent)
+        intent.putExtra(DetailActivity.INTENT_EXTRA_ID_NEWS, news.newsId)
+        startActivityForResult(intent, 1)
 
     }
 
     override fun onClickLike(newsId: Int) {
-        NewsPresenter.onResponseUpdateNewsLike(newsId, userAuth, this)
 
-        val newsLike = NewsPresenter.arrayListNews.find { it.newsId == newsId }
+        if (!NewsPresenter().isLoading) {
 
-        newsLike!!.like = if (newsLike.like.isEmpty()) {
-            listOf(userAuth.userAuthId)
-        } else {
-            listOf()
+            val newsToUpdateLike = NewsPresenter().arrayListNews.find { it.newsId == newsId }
+
+
+            newsToUpdateLike!!.like = if (NewsPresenter().isUserLikeNews(newsToUpdateLike.like)) {
+                newsToUpdateLike.like.filter { it != userAuth.userAuthId }
+            } else {
+                newsToUpdateLike.like.plusElement(userAuth.userAuthId)
+            }
+
+            binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
+
+            NewsPresenter().onResponseUpdateNewsLike(newsId, this)
+
         }
     }
 
-    override fun onSuccessResponse(message: String, newsId: Int) {
-        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
-
-      /*  val newsLike = NewsPresenter.arrayListNews.find { it.newsId == newsId }
-
-        newsLike!!.like = if (newsLike.like.isEmpty()) {
-            listOf(userAuth.userAuthId)
-        } else {
-            listOf()
-        }
-*/
+    override fun onSuccessResponse() {
+        binding!!.containerNoConnection.visibility = View.GONE
     }
 
     override fun onFailureResponse(message: String) {
+
         val newMessage = if (message.isEmpty()) {
             getString(R.string.server_error)
         } else {
@@ -145,6 +156,10 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
         }
 
         Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
+
+        if (binding!!.recyclerViewNews.adapter!!.itemCount == 0) {
+            binding!!.containerNoConnection.visibility = View.VISIBLE
+        }
     }
 
 }

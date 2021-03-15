@@ -37,7 +37,7 @@ class WNewsApplication : Application() {
     }
 
     private fun initializeUserPreference() {
-        
+
         val sharedPreference = PreferenceManager.getDefaultSharedPreferences(this)
         UserProvider.intanceUserAuth(sharedPreference)
 

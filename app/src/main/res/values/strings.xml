@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">WNews</string>
+    <string name="wolox">Wolox</string>
     <string name="server_error">Server error. Try again later.</string>
 
 
@@ -22,6 +23,7 @@
     <string name="home_label">Wolox</string>
     <string name="home_news">News</string>
     <string name="home_profile">Profile</string>
+    <string name="no_connection">Ups, try again later</string>
 
     <!-- Hint News -->
     <string name="title_hint">Lorem ipsum</string>

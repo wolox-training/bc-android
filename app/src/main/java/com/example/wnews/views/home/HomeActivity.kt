@@ -1,7 +1,7 @@
 package com.example.wnews.views.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.wnews.R
 import com.example.wnews.databinding.ActivityHomeBinding
 import com.google.android.material.tabs.TabLayout
@@ -32,12 +32,12 @@ class HomeActivity : AppCompatActivity(R.layout.activity_home) {
 
                 0 -> {
                     tab.text = getString(R.string.home_news)
-                    tab.setIcon(R.drawable.ic_baseline_view_list_24)
+                    tab.setIcon(R.drawable.ic_news_list_off)
                 }
 
                 1 -> {
                     tab.text = getString(R.string.home_profile)
-                    tab.setIcon(R.drawable.ic_baseline_person_24)
+                    tab.setIcon(R.drawable.ic_profile_off)
                 }
 
             }
