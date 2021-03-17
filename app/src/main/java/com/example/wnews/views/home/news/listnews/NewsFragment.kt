@@ -164,4 +164,8 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsListView {
         }
     }
 
+    override fun onRequestFailure() {
+        TODO("Not yet implemented")
+    }
+
 }

@@ -91,4 +91,8 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsDetailView {
         Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
     }
 
+    override fun onRequestFailure() {
+        TODO("Not yet implemented")
+    }
+
 }

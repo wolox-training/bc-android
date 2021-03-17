@@ -18,11 +18,7 @@ class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
 
     fun validateUserMail(userMail: String): Boolean {
 
-        if (FormatUtils().isValidEmail(userMail)) {
-            return true
-        }
-
-        return false
+        return FormatUtils().EMAIL_ADDRESS_PATTERN.matcher(userMail).matches()
     }
 
     fun isUserMailEmpty(userMail: String): Boolean {
