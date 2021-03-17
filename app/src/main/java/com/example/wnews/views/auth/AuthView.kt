@@ -8,5 +8,4 @@ interface AuthView {
 
     fun onRequestFailure()
 
-
 }

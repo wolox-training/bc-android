@@ -15,7 +15,6 @@ import retrofit2.Response
 
 class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
 
-
     fun validateUserMail(userMail: String): Boolean {
 
         return FormatUtils().EMAIL_ADDRESS_PATTERN.matcher(userMail).matches()

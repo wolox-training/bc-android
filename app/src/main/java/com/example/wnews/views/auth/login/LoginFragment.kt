@@ -89,7 +89,6 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
         binding!!.buttonSignUp.isEnabled = status
         binding!!.buttonLogIn.isEnabled = status
         binding!!.buttonTerms.isEnabled = status
-
     }
 
     override fun onResponseSuccess() {
