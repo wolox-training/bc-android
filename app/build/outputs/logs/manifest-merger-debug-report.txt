@@ -1,0 +1,340 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+MERGED from [androidx.databinding:viewbinding:4.1.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f7c7fe0b0317ec160eb098a6b2fcd8c6/jetified-viewbinding-4.1.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/060997b98b86d1bfafe360dcd9bd6b26/navigation-fragment-ktx-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/bb7611a0391e7585dfd01abfb261bf7b/navigation-ui-ktx-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.preference:preference-ktx:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e6850bc90db05c6971128b80d90c271d/jetified-preference-ktx-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.2.5] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/97a8ac23b8edbd01a6435d3c16a1e243/jetified-fragment-ktx-1.2.5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/9de3cce565529976128a842082940938/navigation-runtime-ktx-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/c81c670aac7af2ab72aeb1d26bfb4bd4/jetified-activity-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/4d5cebbf19b17c36192a520f2ce1daeb/navigation-common-ktx-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/7bd76fe566e0bbaa94cbdca76f0054d6/jetified-core-ktx-1.3.2/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/97cf546ce19ab7a866a4be6ff5db1a52/jetified-lifecycle-livedata-ktx-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/09001f0b30ee724e5f52d127906514c9/jetified-lifecycle-viewmodel-ktx-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1464fb17876a6da889174c679f2a2e7f/jetified-lifecycle-livedata-core-ktx-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/502c83209f244d0432ca24bd1f3c870a/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b5a0d2bb92cee264c869938f8fb79a6a/navigation-ui-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/07aa5cc7693e172b4167e3f4a5862493/material-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d87482537cde6607a562d8f19ee28fd5/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b2d9b5b82e22163e74ed87f3b36dec8f/jetified-android-networking-1.0.2/AndroidManifest.xml:18:1-27:12
+MERGED from [androidx.preference:preference:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/358fba5fd409e0279321982dc1956c23/preference-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e07470e92ac137cd5ec211bbe860c52d/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.shimmer:shimmer:0.5.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0ef92f55035e836e74a683c46cda8e7b/jetified-shimmer-0.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/abea08582e54ee22f4d5366854c60515/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f85c7bd7a29179eec5e4c31e2fa09ed8/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a6b92086a01ce87ef0aec9fc9dcceef2/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/90e5084cde57ab2838d2ea451d74651f/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/76944f3df01190a2307026377d08eef9/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a27c5fc64488584fc6a449457946dee3/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e9226096bf5c5e8763b6dc7ee3cfd0e0/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/79195949b527d5405e12b0a8231b0d43/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/4f7782143155f2b9b550e81bb5c22912/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0d94d3256e4d20ecaa4db36b8094f080/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/44a84887e1586ead8581c1b2d67d624b/navigation-fragment-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.5] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d7517e20843cf5f9c5bb6b9c2f842cce/fragment-1.2.5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/ad6426414321d663c6e641c5efde39b8/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b2d72f512b2cd134552b2f49573b213b/transition-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0dc608cecfcf284f28d688b897157e6d/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a891ff1edc66a54409fe9115d6481d81/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/bc00727eb34a7de6609683a765240c2e/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/8fc6e6d48d11edc744c3d4f11d624bf3/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1e2436168361d6236c7e43b9fa1863ca/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/736b765d701bf74700e5f545a86ced5a/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0a56f8a059ead6d6ab41674feb22d524/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/053899e97a27ef614adb363825b91f18/navigation-runtime-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/91abf05c324beeecd46a5d42269e3c71/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/11decf2387c8d6bc45928a3e0c77e7d4/navigation-common-2.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f38741afbc15448069dcad047c69fca9/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/47fe0169a6cd09eb4aa32babdc8704f3/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/c91b8d1171c88e453b5f4431799ad0fa/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/6e849433197c23a8a326d5970cd44323/lifecycle-viewmodel-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/29ce79cafef5637ca6343b16ffe50df7/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/44caf1225883bf3da93037c955d16256/lifecycle-livedata-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/af654c3bcd8d5bf855aea3f22902992f/lifecycle-livedata-core-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78eeb2d15c3e5dc57f49993b7464ad9d/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/7ac333458f1f033ca74269387fa48b21/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0373270d771470e2f27eba9fd76020e0/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/419e1a1e8e08d1dcbcefa6657f386c11/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/af84680f7cea34b08bb1c9cacd160cac/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a9f6a0b4a49b2626cb8d9e8bd7b76efa/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f5699f49968ee4a77d844ab9062d63dc/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0fdb8ad2ae233cd05b85f5bb7f9490c4/jetified-fresco-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fbbcebf752ff1c63cc821154fa12029d/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:drawee:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/60fdff230fef89ebb82ea832e78ee1ff/jetified-drawee-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d8d660b11dbd49a66b98ee08e57d9abe/jetified-nativeimagefilters-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f088c143aaf2951d4c1e1ced96cb638e/jetified-memory-type-native-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/6a82df43b6dcb32ee2d3fdd4b5c5eb98/jetified-memory-type-java-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/61988cb53f1fbe47c7cc4796ecbabde3/jetified-imagepipeline-native-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e70d41acfe1456dd188c142797bff674/jetified-memory-type-ashmem-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/3bf229e9fe0e9ff4bf6cd3b6e9343db3/jetified-imagepipeline-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/cb19b5537f47d4ece08783a7457afa23/jetified-nativeimagetranscoder-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/adae485a16f9069bd61b0dcc8b335dc5/jetified-soloader-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:middleware:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1f14fb938a197da772d65e55cc9db015/jetified-middleware-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b233baf3a66c7ba58ba718fa8c50dc2f/jetified-ui-common-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/86a16426e657a62b45c08d2d40553bbd/jetified-imagepipeline-base-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fe8c7e6a9cd17cd355e2b99932f94ac9/jetified-fbcore-2.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fd0e82927bacf886481709fef18040df/jetified-soloader-0.9.0/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+	package
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:1-40:12
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:6:22-76
+application
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:8:5-38:19
+MERGED from [com.google.android.material:material:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/07aa5cc7693e172b4167e3f4a5862493/material-1.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/07aa5cc7693e172b4167e3f4a5862493/material-1.3.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d87482537cde6607a562d8f19ee28fd5/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d87482537cde6607a562d8f19ee28fd5/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/29ce79cafef5637ca6343b16ffe50df7/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/29ce79cafef5637ca6343b16ffe50df7/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fd0e82927bacf886481709fef18040df/jetified-soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fd0e82927bacf886481709fef18040df/jetified-soloader-0.9.0/AndroidManifest.xml:11:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:15:9-43
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:9:9-41
+activity#com.example.wnews.views.home.news.detail.DetailActivity
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:16:9-18:62
+	android:theme
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:18:13-59
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:17:13-66
+activity#com.example.wnews.RootActivity
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:19:9-27:20
+	android:noHistory
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:20:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:25:27-74
+activity#com.example.wnews.views.auth.signup.SignUpActivity
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:28:9-70
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:28:19-67
+activity#com.example.wnews.views.auth.login.LoginActivity
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:29:9-32:62
+	android:noHistory
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:31:13-37
+	android:theme
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:32:13-59
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:30:13-59
+activity#com.example.wnews.views.home.HomeActivity
+ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:33:9-37:50
+	android:label
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:37:13-47
+	android:theme
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:36:13-59
+	android:name
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:34:13-52
+uses-sdk
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:4.1.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f7c7fe0b0317ec160eb098a6b2fcd8c6/jetified-viewbinding-4.1.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:4.1.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f7c7fe0b0317ec160eb098a6b2fcd8c6/jetified-viewbinding-4.1.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/060997b98b86d1bfafe360dcd9bd6b26/navigation-fragment-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/060997b98b86d1bfafe360dcd9bd6b26/navigation-fragment-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/bb7611a0391e7585dfd01abfb261bf7b/navigation-ui-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/bb7611a0391e7585dfd01abfb261bf7b/navigation-ui-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference-ktx:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e6850bc90db05c6971128b80d90c271d/jetified-preference-ktx-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference-ktx:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e6850bc90db05c6971128b80d90c271d/jetified-preference-ktx-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.5] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/97a8ac23b8edbd01a6435d3c16a1e243/jetified-fragment-ktx-1.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.5] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/97a8ac23b8edbd01a6435d3c16a1e243/jetified-fragment-ktx-1.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/9de3cce565529976128a842082940938/navigation-runtime-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/9de3cce565529976128a842082940938/navigation-runtime-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/c81c670aac7af2ab72aeb1d26bfb4bd4/jetified-activity-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/c81c670aac7af2ab72aeb1d26bfb4bd4/jetified-activity-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/4d5cebbf19b17c36192a520f2ce1daeb/navigation-common-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/4d5cebbf19b17c36192a520f2ce1daeb/navigation-common-ktx-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/7bd76fe566e0bbaa94cbdca76f0054d6/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/7bd76fe566e0bbaa94cbdca76f0054d6/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/97cf546ce19ab7a866a4be6ff5db1a52/jetified-lifecycle-livedata-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/97cf546ce19ab7a866a4be6ff5db1a52/jetified-lifecycle-livedata-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/09001f0b30ee724e5f52d127906514c9/jetified-lifecycle-viewmodel-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/09001f0b30ee724e5f52d127906514c9/jetified-lifecycle-viewmodel-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1464fb17876a6da889174c679f2a2e7f/jetified-lifecycle-livedata-core-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1464fb17876a6da889174c679f2a2e7f/jetified-lifecycle-livedata-core-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/502c83209f244d0432ca24bd1f3c870a/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/502c83209f244d0432ca24bd1f3c870a/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b5a0d2bb92cee264c869938f8fb79a6a/navigation-ui-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b5a0d2bb92cee264c869938f8fb79a6a/navigation-ui-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/07aa5cc7693e172b4167e3f4a5862493/material-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/07aa5cc7693e172b4167e3f4a5862493/material-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d87482537cde6607a562d8f19ee28fd5/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d87482537cde6607a562d8f19ee28fd5/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b2d9b5b82e22163e74ed87f3b36dec8f/jetified-android-networking-1.0.2/AndroidManifest.xml:23:5-25:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b2d9b5b82e22163e74ed87f3b36dec8f/jetified-android-networking-1.0.2/AndroidManifest.xml:23:5-25:41
+MERGED from [androidx.preference:preference:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/358fba5fd409e0279321982dc1956c23/preference-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/358fba5fd409e0279321982dc1956c23/preference-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e07470e92ac137cd5ec211bbe860c52d/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e07470e92ac137cd5ec211bbe860c52d/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.shimmer:shimmer:0.5.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0ef92f55035e836e74a683c46cda8e7b/jetified-shimmer-0.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.shimmer:shimmer:0.5.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0ef92f55035e836e74a683c46cda8e7b/jetified-shimmer-0.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/abea08582e54ee22f4d5366854c60515/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/abea08582e54ee22f4d5366854c60515/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f85c7bd7a29179eec5e4c31e2fa09ed8/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f85c7bd7a29179eec5e4c31e2fa09ed8/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a6b92086a01ce87ef0aec9fc9dcceef2/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a6b92086a01ce87ef0aec9fc9dcceef2/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/90e5084cde57ab2838d2ea451d74651f/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/90e5084cde57ab2838d2ea451d74651f/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/76944f3df01190a2307026377d08eef9/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/76944f3df01190a2307026377d08eef9/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a27c5fc64488584fc6a449457946dee3/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a27c5fc64488584fc6a449457946dee3/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e9226096bf5c5e8763b6dc7ee3cfd0e0/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e9226096bf5c5e8763b6dc7ee3cfd0e0/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/79195949b527d5405e12b0a8231b0d43/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/79195949b527d5405e12b0a8231b0d43/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/4f7782143155f2b9b550e81bb5c22912/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/4f7782143155f2b9b550e81bb5c22912/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0d94d3256e4d20ecaa4db36b8094f080/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0d94d3256e4d20ecaa4db36b8094f080/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/44a84887e1586ead8581c1b2d67d624b/navigation-fragment-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/44a84887e1586ead8581c1b2d67d624b/navigation-fragment-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.5] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d7517e20843cf5f9c5bb6b9c2f842cce/fragment-1.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.5] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d7517e20843cf5f9c5bb6b9c2f842cce/fragment-1.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/ad6426414321d663c6e641c5efde39b8/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/ad6426414321d663c6e641c5efde39b8/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b2d72f512b2cd134552b2f49573b213b/transition-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b2d72f512b2cd134552b2f49573b213b/transition-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0dc608cecfcf284f28d688b897157e6d/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0dc608cecfcf284f28d688b897157e6d/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a891ff1edc66a54409fe9115d6481d81/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a891ff1edc66a54409fe9115d6481d81/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/bc00727eb34a7de6609683a765240c2e/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/bc00727eb34a7de6609683a765240c2e/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/8fc6e6d48d11edc744c3d4f11d624bf3/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/8fc6e6d48d11edc744c3d4f11d624bf3/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1e2436168361d6236c7e43b9fa1863ca/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1e2436168361d6236c7e43b9fa1863ca/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/736b765d701bf74700e5f545a86ced5a/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/736b765d701bf74700e5f545a86ced5a/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0a56f8a059ead6d6ab41674feb22d524/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0a56f8a059ead6d6ab41674feb22d524/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/053899e97a27ef614adb363825b91f18/navigation-runtime-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/053899e97a27ef614adb363825b91f18/navigation-runtime-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/91abf05c324beeecd46a5d42269e3c71/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/91abf05c324beeecd46a5d42269e3c71/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/11decf2387c8d6bc45928a3e0c77e7d4/navigation-common-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.3] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/11decf2387c8d6bc45928a3e0c77e7d4/navigation-common-2.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f38741afbc15448069dcad047c69fca9/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f38741afbc15448069dcad047c69fca9/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/47fe0169a6cd09eb4aa32babdc8704f3/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/47fe0169a6cd09eb4aa32babdc8704f3/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/c91b8d1171c88e453b5f4431799ad0fa/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/c91b8d1171c88e453b5f4431799ad0fa/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/6e849433197c23a8a326d5970cd44323/lifecycle-viewmodel-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/6e849433197c23a8a326d5970cd44323/lifecycle-viewmodel-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/29ce79cafef5637ca6343b16ffe50df7/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/29ce79cafef5637ca6343b16ffe50df7/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/44caf1225883bf3da93037c955d16256/lifecycle-livedata-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/44caf1225883bf3da93037c955d16256/lifecycle-livedata-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/af654c3bcd8d5bf855aea3f22902992f/lifecycle-livedata-core-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/af654c3bcd8d5bf855aea3f22902992f/lifecycle-livedata-core-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78eeb2d15c3e5dc57f49993b7464ad9d/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78eeb2d15c3e5dc57f49993b7464ad9d/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/7ac333458f1f033ca74269387fa48b21/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/7ac333458f1f033ca74269387fa48b21/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0373270d771470e2f27eba9fd76020e0/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0373270d771470e2f27eba9fd76020e0/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/419e1a1e8e08d1dcbcefa6657f386c11/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/419e1a1e8e08d1dcbcefa6657f386c11/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/af84680f7cea34b08bb1c9cacd160cac/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/af84680f7cea34b08bb1c9cacd160cac/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a9f6a0b4a49b2626cb8d9e8bd7b76efa/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/a9f6a0b4a49b2626cb8d9e8bd7b76efa/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f5699f49968ee4a77d844ab9062d63dc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f5699f49968ee4a77d844ab9062d63dc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0fdb8ad2ae233cd05b85f5bb7f9490c4/jetified-fresco-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/0fdb8ad2ae233cd05b85f5bb7f9490c4/jetified-fresco-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fbbcebf752ff1c63cc821154fa12029d/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fbbcebf752ff1c63cc821154fa12029d/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:drawee:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/60fdff230fef89ebb82ea832e78ee1ff/jetified-drawee-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/60fdff230fef89ebb82ea832e78ee1ff/jetified-drawee-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d8d660b11dbd49a66b98ee08e57d9abe/jetified-nativeimagefilters-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/d8d660b11dbd49a66b98ee08e57d9abe/jetified-nativeimagefilters-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f088c143aaf2951d4c1e1ced96cb638e/jetified-memory-type-native-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/f088c143aaf2951d4c1e1ced96cb638e/jetified-memory-type-native-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/6a82df43b6dcb32ee2d3fdd4b5c5eb98/jetified-memory-type-java-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/6a82df43b6dcb32ee2d3fdd4b5c5eb98/jetified-memory-type-java-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/61988cb53f1fbe47c7cc4796ecbabde3/jetified-imagepipeline-native-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/61988cb53f1fbe47c7cc4796ecbabde3/jetified-imagepipeline-native-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e70d41acfe1456dd188c142797bff674/jetified-memory-type-ashmem-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/e70d41acfe1456dd188c142797bff674/jetified-memory-type-ashmem-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/3bf229e9fe0e9ff4bf6cd3b6e9343db3/jetified-imagepipeline-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/3bf229e9fe0e9ff4bf6cd3b6e9343db3/jetified-imagepipeline-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/cb19b5537f47d4ece08783a7457afa23/jetified-nativeimagetranscoder-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/cb19b5537f47d4ece08783a7457afa23/jetified-nativeimagetranscoder-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/adae485a16f9069bd61b0dcc8b335dc5/jetified-soloader-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/adae485a16f9069bd61b0dcc8b335dc5/jetified-soloader-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:middleware:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1f14fb938a197da772d65e55cc9db015/jetified-middleware-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:middleware:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/1f14fb938a197da772d65e55cc9db015/jetified-middleware-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b233baf3a66c7ba58ba718fa8c50dc2f/jetified-ui-common-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/b233baf3a66c7ba58ba718fa8c50dc2f/jetified-ui-common-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/86a16426e657a62b45c08d2d40553bbd/jetified-imagepipeline-base-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/86a16426e657a62b45c08d2d40553bbd/jetified-imagepipeline-base-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fe8c7e6a9cd17cd355e2b99932f94ac9/jetified-fbcore-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.4.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fe8c7e6a9cd17cd355e2b99932f94ac9/jetified-fbcore-2.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fd0e82927bacf886481709fef18040df/jetified-soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/fd0e82927bacf886481709fef18040df/jetified-soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml

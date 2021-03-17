@@ -1,0 +1,83 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.wnews"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:6:5-79
+12-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:6:22-76
+13
+14    <application
+14-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:8:5-38:19
+15        android:name="com.example.wnews.WNewsApplication"
+15-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:9:9-41
+16        android:allowBackup="true"
+16-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:10:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.3.2] /home/bdcornelis/.gradle/caches/transforms-2/files-2.1/78ea51a2fed15dc859b97fefb5ea310a/core-1.3.2/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:11:9-43
+20        android:label="@string/app_name"
+20-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:12:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:13:9-54
+22        android:supportsRtl="true"
+22-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:14:9-35
+23        android:theme="@style/Theme.WNews" >
+23-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:15:9-43
+24        <activity
+24-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:16:9-18:62
+25            android:name="com.example.wnews.views.home.news.detail.DetailActivity"
+25-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:17:13-66
+26            android:theme="@style/Theme.WNews.NoActionBar" />
+26-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:18:13-59
+27        <activity
+27-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:19:9-27:20
+28            android:name="com.example.wnews.RootActivity"
+28-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:20:13-41
+29            android:noHistory="true" >
+29-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:21:13-37
+30            <intent-filter>
+30-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:22:13-26:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:23:17-69
+31-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:23:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:25:17-77
+33-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:25:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity android:name="com.example.wnews.views.auth.signup.SignUpActivity" />
+36-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:28:9-70
+36-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:28:19-67
+37        <activity
+37-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:29:9-32:62
+38            android:name="com.example.wnews.views.auth.login.LoginActivity"
+38-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:30:13-59
+39            android:noHistory="true"
+39-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:31:13-37
+40            android:theme="@style/Theme.WNews.NoActionBar" />
+40-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:32:13-59
+41        <activity
+41-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:33:9-37:50
+42            android:name="com.example.wnews.views.home.HomeActivity"
+42-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:34:13-52
+43            android:label="@string/home_label"
+43-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:37:13-47
+44            android:theme="@style/Theme.WNews.NoActionBar" />
+44-->/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/AndroidManifest.xml:36:13-59
+45    </application>
+46
+47</manifest>

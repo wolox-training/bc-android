@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.home.news.listnews.NewsFragment">
+
+    <RelativeLayout
+        android:id="@+id/container_no_connection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_no_signal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_signal_wifi_off_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_no_signal"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/spacing_extra_large"
+            android:text="@string/no_connection"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_large" />
+
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!-- Adding 15 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="50dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttton_add_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/spacing_large"
+        android:src="@drawable/ic_baseline_add_24" />
+
+
+</FrameLayout>

@@ -1,0 +1,22 @@
+com/example/wnews/databinding/FragmentNewsBinding.java
+ com.example.wnews.databinding.FragmentNewsBinding
+com/example/wnews/databinding/FragmentDetailBinding.java
+ com.example.wnews.databinding.FragmentDetailBinding
+com/example/wnews/databinding/ShimmerPlaceholderLayoutBinding.java
+ com.example.wnews.databinding.ShimmerPlaceholderLayoutBinding
+com/example/wnews/databinding/ActivitySignInBinding.java
+ com.example.wnews.databinding.ActivitySignInBinding
+com/example/wnews/BuildConfig.java
+ com.example.wnews.BuildConfig
+com/example/wnews/databinding/ActivityHomeBinding.java
+ com.example.wnews.databinding.ActivityHomeBinding
+com/example/wnews/databinding/ItemNewsBinding.java
+ com.example.wnews.databinding.ItemNewsBinding
+com/example/wnews/databinding/ActivityDetailBinding.java
+ com.example.wnews.databinding.ActivityDetailBinding
+com/example/wnews/databinding/ActivityLoginBinding.java
+ com.example.wnews.databinding.ActivityLoginBinding
+com/example/wnews/databinding/FragmentLoginBinding.java
+ com.example.wnews.databinding.FragmentLoginBinding
+com/example/wnews/databinding/FragmentProfileBinding.java
+ com.example.wnews.databinding.FragmentProfileBinding

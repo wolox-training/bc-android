@@ -1,0 +1,158 @@
+[
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_like_on.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_like_on.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-v24_ic_like_off.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable-v24/ic_like_off.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_fragment_profile.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_wolox_logo.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/wolox_logo.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_activity_home.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_baseline_add_24.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_item_news.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/item_news.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_activity_sign_in.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_sign_in.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-v24_img.jpg.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable-v24/img.jpg"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_baseline_person_24.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_activity_detail.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_detail.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_baseline_view_list_24.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_baseline_view_list_24.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_shimmer_placeholder_layout.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/shimmer_placeholder_layout.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_baseline_signal_wifi_off_24.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_baseline_signal_wifi_off_24.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-v24_ic_profile_off.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable-v24/ic_profile_off.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-v24_wolox_logo.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable-v24/wolox_logo.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_login_cover.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/login_cover.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-v24_ic_news_list_off.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable-v24/ic_news_list_off.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_fragment_login.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_fragment_detail.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_detail.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable_ic_baseline_image_24.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable/ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/drawable-v24_ic_back.png.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/drawable-v24/ic_back.png"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/res/merged/debug/layout_fragment_news.xml.flat",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_news.xml"
+    }
+]

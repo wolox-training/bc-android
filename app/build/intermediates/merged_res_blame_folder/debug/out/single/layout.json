@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_sign_in.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_sign_in.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_detail.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_detail.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_news.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_news.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_news.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/item_news.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_detail.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_placeholder_layout.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/shimmer_placeholder_layout.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
+        "source": "/home/bdcornelis/AndroidStudioProjects/bc-android/app/src/main/res/layout/activity_home.xml"
+    }
+]
