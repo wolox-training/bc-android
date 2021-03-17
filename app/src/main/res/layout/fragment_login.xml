@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +23,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@id/bg_login_cover"
             app:layout_constraintTop_toBottomOf="@id/bg_login_cover"
-            android:src="@drawable/wolox_logo"/>
+            android:src="@drawable/wolox_logo" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,8 +38,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_extra_large"
                 android:singleLine="true"
+                android:text="clinton.harris59@example.com"
                 android:inputType="textEmailAddress"
-                android:hint="@string/login_email_user"/>
+                android:hint="@string/login_email_user" />
 
 
             <EditText
@@ -49,8 +48,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_extra_large"
+                android:text="123456"
                 android:inputType="textPassword"
-                android:hint="@string/login_password_user"/>
+                android:hint="@string/login_password_user" />
 
             <Button
                 android:id="@+id/button_log_in"
@@ -59,7 +59,7 @@
                 android:backgroundTint="@color/white"
                 android:textColor="@color/black"
                 android:layout_marginTop="20dp"
-                android:text="@string/login_log_in"/>
+                android:text="@string/login_log_in" />
 
 
             <Button
@@ -67,13 +67,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/login_sing_up"/>
+                android:text="@string/login_sing_up" />
 
             <TextView
                 android:id="@+id/textview_message_error"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/red"/>
+                android:textColor="@color/red" />
 
 
             <ProgressBar
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
-                android:layout_gravity="center|bottom"/>
+                android:layout_gravity="center|bottom" />
 
 
         </LinearLayout>
