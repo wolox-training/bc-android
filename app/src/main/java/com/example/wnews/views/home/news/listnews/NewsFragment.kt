@@ -1,4 +1,4 @@
-package com.example.wnews.views.home.news
+package com.example.wnews.views.home.news.listnews
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,12 +12,13 @@ import com.example.wnews.UserProvider
 import com.example.wnews.databinding.FragmentNewsBinding
 import com.example.wnews.models.News
 import com.example.wnews.models.UserAuth
-import com.example.wnews.views.home.news.adapter.NewsAdapter
+import com.example.wnews.views.home.news.NewsProvider
 import com.example.wnews.views.home.news.detail.DetailActivity
-import com.example.wnews.views.home.news.presenter.NewsPresenter
+import com.example.wnews.views.home.news.listnews.adapter.NewsAdapter
+import com.example.wnews.views.home.news.listnews.presenter.NewsPresenter
 import com.google.android.material.snackbar.Snackbar
 
-class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
+class NewsFragment : Fragment(R.layout.fragment_news), NewsListView {
 
     private var binding: FragmentNewsBinding? = null
     private var viewManager = LinearLayoutManager(context)
@@ -130,11 +131,12 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
             val newsToUpdateLike = NewsPresenter().arrayListNews.find { it.newsId == newsId }
 
 
-            newsToUpdateLike!!.like = if (NewsPresenter().isUserLikeNews(newsToUpdateLike.like)) {
-                newsToUpdateLike.like.filter { it != userAuth.userAuthId }
-            } else {
-                newsToUpdateLike.like.plusElement(userAuth.userAuthId)
-            }
+            newsToUpdateLike!!.like =
+                if (NewsPresenter().currentUserLikesNews(newsToUpdateLike.like)) {
+                    newsToUpdateLike.like.filter { it != userAuth.userAuthId }
+                } else {
+                    newsToUpdateLike.like.plusElement(userAuth.userAuthId)
+                }
 
             binding!!.recyclerViewNews.adapter!!.notifyDataSetChanged()
 

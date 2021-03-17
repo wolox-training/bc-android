@@ -65,4 +65,8 @@ dependencies {
     implementation 'com.facebook.fresco:fresco:2.4.0'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+    testImplementation "org.mockito:mockito-core:2.13.0"
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+
 }

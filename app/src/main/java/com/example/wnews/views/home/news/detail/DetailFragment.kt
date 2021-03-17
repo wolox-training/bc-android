@@ -10,12 +10,11 @@ import com.example.wnews.UserProvider
 import com.example.wnews.databinding.FragmentDetailBinding
 import com.example.wnews.models.News
 import com.example.wnews.models.UserAuth
-import com.example.wnews.views.home.news.NewsView
 import com.example.wnews.views.home.news.detail.presenter.DetailPresenter
 import com.google.android.material.snackbar.Snackbar
 
 
-class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
+class DetailFragment : Fragment(R.layout.fragment_detail), NewsDetailView {
 
     private var binding: FragmentDetailBinding? = null
     private lateinit var newView: View
@@ -37,6 +36,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
         initializeProvider()
         setContent(news)
         setListener(news)
+
     }
 
     private fun initializeProvider() {
@@ -48,7 +48,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
         binding!!.textViewDetail.text = news.detail
         binding!!.bgImageUrl.setImageURI(news.imageUrl)
 
-        if (DetailPresenter().isUserLikeNews(news.like)) {
+        if (DetailPresenter().currentUserLikesNews(news.like)) {
             binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_on)
         }
     }
@@ -67,7 +67,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
                 DetailPresenter().arrayListNews.find { it.newsId == news!!.newsId }
 
 
-            if (DetailPresenter().isUserLikeNews(newsToUpdateLike!!.like)) {
+            if (DetailPresenter().currentUserLikesNews(newsToUpdateLike!!.like)) {
 
                 newsToUpdateLike.like = newsToUpdateLike.like.filter { it != userAuth.userAuthId }
                 binding!!.imageButtonLikeDetail.setImageResource(R.drawable.ic_like_off)
@@ -81,8 +81,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
         }
     }
 
-    override fun onSuccessResponse() {}
-
     override fun onFailureResponse(message: String) {
         val newMessage = if (message.isEmpty()) {
             getString(R.string.server_error)
@@ -92,19 +90,5 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsView {
 
         Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
     }
-
-
-    /*NOT IMPLEMENTED*/
-
-    override fun initAdapter() {}
-
-    override fun onNewPageReceived() {}
-
-    override fun showProgressBar(isLoading: Boolean) {}
-
-    override fun openDetail(news: News) {}
-
-    override fun onClickLike(newsId: Int) {}
-
 
 }

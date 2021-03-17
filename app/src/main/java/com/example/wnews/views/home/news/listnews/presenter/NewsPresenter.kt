@@ -1,4 +1,4 @@
-package com.example.wnews.views.home.news.presenter
+package com.example.wnews.views.home.news.listnews.presenter
 
 import com.example.wnews.models.UserAuth
 import com.example.wnews.views.home.news.NewsProvider
@@ -9,10 +9,6 @@ class NewsPresenter {
     val arrayListNews = NewsProvider.arrayListNews
 
     val isLoading = NewsProvider.isLoading
-
-    fun clearArrayList() {
-        NewsProvider.clearArrayList()
-    }
 
     fun onResponseNews(page: Int) {
         NewsProvider.onResponseNews(page)
@@ -26,6 +22,6 @@ class NewsPresenter {
         NewsProvider.initNewsProvider(userAuth, newsView)
     }
 
-    fun isUserLikeNews(likes: List<Int>) =
-        NewsProvider.isUserLikeNews(likes)
+    fun currentUserLikesNews(likes: List<Int>) =
+        NewsProvider.currentUserLikesNews(likes)
 }

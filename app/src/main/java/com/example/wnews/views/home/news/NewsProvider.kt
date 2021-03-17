@@ -132,7 +132,7 @@ object NewsProvider {
         })
     }
 
-    fun isUserLikeNews(likes: List<Int>): Boolean {
+    fun currentUserLikesNews(likes: List<Int>): Boolean {
         likes.forEach { like ->
             if (like == userAuthProvider.userAuthId) {
                 return true

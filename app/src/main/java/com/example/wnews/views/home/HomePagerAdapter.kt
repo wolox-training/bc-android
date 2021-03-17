@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.wnews.views.home.news.NewsFragment
+import com.example.wnews.views.home.news.listnews.NewsFragment
 import com.example.wnews.views.home.profile.ProfileFragment
 
 

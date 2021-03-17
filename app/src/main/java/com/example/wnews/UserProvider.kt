@@ -6,6 +6,8 @@ import com.google.gson.Gson
 
 object UserProvider {
 
+    private const val USER_AUTH = "USER_AUTH"
+
     lateinit var userAuth: UserAuth
         private set
 
@@ -17,7 +19,7 @@ object UserProvider {
 
     fun intanceUserAuth(sharedPreferences: SharedPreferences) {
 
-        val sharedPrefString = sharedPreferences.getString("UserAuth", "")
+        val sharedPrefString = sharedPreferences.getString(USER_AUTH, "")
         userAuth = if (sharedPrefString!!.isEmpty()) {
             UserAuth()
         } else {
@@ -29,7 +31,7 @@ object UserProvider {
     fun saveUserAuth(newUserAuth: UserAuth, sharedPreferences: SharedPreferences) {
 
         val editor = sharedPreferences.edit()
-        editor.putString("UserAuth", Gson().toJson(newUserAuth).toString())
+        editor.putString(USER_AUTH, Gson().toJson(newUserAuth).toString())
         editor.apply()
 
         userAuth = newUserAuth
@@ -39,11 +41,10 @@ object UserProvider {
     fun killSession(sharedPreferences: SharedPreferences) {
 
         val editor = sharedPreferences.edit()
-        editor.putString("UserAuth", UserAuth().toString())
+        editor.putString(USER_AUTH, UserAuth().toString())
         editor.apply()
 
         userAuth = UserAuth()
 
     }
-
 }

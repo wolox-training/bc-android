@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.home.news.NewsFragment">
+    tools:context=".views.home.news.listnews.NewsFragment">
 
     <RelativeLayout
         android:id="@+id/container_no_connection"

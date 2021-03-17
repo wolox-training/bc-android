@@ -1,4 +1,4 @@
-package com.example.wnews.views.home.news.adapter
+package com.example.wnews.views.home.news.listnews.adapter
 
 import android.view.LayoutInflater
 import android.view.View

@@ -11,6 +11,6 @@ class DetailPresenter {
         NewsProvider.onResponseUpdateNewsLike(newsId, newsView)
     }
 
-    fun isUserLikeNews(likes: List<Int>) =
-        NewsProvider.isUserLikeNews(likes)
+    fun currentUserLikesNews(likes: List<Int>) =
+        NewsProvider.currentUserLikesNews(likes)
 }
