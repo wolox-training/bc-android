@@ -6,6 +6,7 @@ import com.example.wnews.models.User
 import com.example.wnews.models.UserAuth
 import com.example.wnews.models.UserAuthResponse
 import com.example.wnews.providers.RetrofitProvider
+import com.example.wnews.utils.FormatUtils
 import okhttp3.Headers
 import retrofit2.Call
 import retrofit2.Callback
@@ -14,6 +15,34 @@ import retrofit2.Response
 
 class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
 
+
+    fun validateUserMail(userMail: String): Boolean {
+
+        if (FormatUtils().isValidEmail(userMail)) {
+            return true
+        }
+
+        return false
+    }
+
+    fun isUserMailEmpty(userMail: String): Boolean {
+
+        if (userMail.isEmpty()) {
+            return true
+        }
+
+        return false
+    }
+
+    fun isUserPasswordEmpty(password: String): Boolean {
+
+        if (password.isEmpty()) {
+            return true
+        }
+
+        return false
+
+    }
 
     fun onResponseLogIn(user: User) {
 
@@ -39,18 +68,18 @@ class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
 
                     UserProvider.saveUserAuth(userAuth, sharedPref)
 
-                    view!!.onAuthResponse(response.code())
+                    view!!.onResponseSuccess()
 
                 } else if (response.errorBody() != null) {
 
-                    view!!.onAuthResponse(response.code())
+                    view!!.onResponseFailure(response.message())
 
                 }
 
             }
 
             override fun onFailure(call: Call<UserAuthResponse?>?, t: Throwable?) {
-                view!!.onAuthResponse(0)
+                view!!.onRequestFailure()
             }
 
 
