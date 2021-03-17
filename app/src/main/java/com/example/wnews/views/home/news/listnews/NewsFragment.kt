@@ -145,11 +145,11 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsListView {
         }
     }
 
-    override fun onSuccessResponse() {
+    override fun onResponseSuccess() {
         binding!!.containerNoConnection.visibility = View.GONE
     }
 
-    override fun onFailureResponse(message: String) {
+    override fun onResponseFailure(message: String) {
 
         val newMessage = if (message.isEmpty()) {
             getString(R.string.server_error)

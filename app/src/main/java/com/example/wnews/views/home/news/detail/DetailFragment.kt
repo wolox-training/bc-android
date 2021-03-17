@@ -81,7 +81,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsDetailView {
         }
     }
 
-    override fun onFailureResponse(message: String) {
+    override fun onResponseFailure(message: String) {
         val newMessage = if (message.isEmpty()) {
             getString(R.string.server_error)
         } else {

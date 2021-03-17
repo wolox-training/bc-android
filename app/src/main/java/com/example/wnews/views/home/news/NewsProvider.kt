@@ -42,17 +42,17 @@ object NewsProvider {
 
                 if (response!!.isSuccessful) {
 
-                    newsView.onSuccessResponse()
+                    newsView.onResponseSuccess()
 
                 } else if (response.errorBody() != null) {
-                    newsView.onFailureResponse(response.message())
+                    newsView.onResponseFailure(response.message())
                 }
 
 
             }
 
             override fun onFailure(call: Call<LikeResponse?>?, t: Throwable?) {
-                newsView.onFailureResponse("")
+                newsView.onResponseFailure("")
             }
 
         })
@@ -106,10 +106,10 @@ object NewsProvider {
                         }
                     }
 
-                    newsViewProvider.onSuccessResponse()
+                    newsViewProvider.onResponseSuccess()
 
                 } else if (response.errorBody() != null) {
-                    newsViewProvider.onFailureResponse(response.message())
+                    newsViewProvider.onResponseFailure(response.message())
                 }
 
                 if (page == 1) {
@@ -123,7 +123,7 @@ object NewsProvider {
             }
 
             override fun onFailure(call: Call<ListNewsResponse?>?, t: Throwable?) {
-                newsViewProvider.onFailureResponse("")
+                newsViewProvider.onResponseFailure("")
                 isLoading = false
                 newsViewProvider.showProgressBar(isLoading)
 

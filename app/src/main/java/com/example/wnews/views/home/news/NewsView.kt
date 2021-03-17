@@ -12,10 +12,12 @@ interface NewsView {
 
     fun onClickLike(newsId: Int)
 
-    fun onSuccessResponse()
+    fun onResponseSuccess()
 
-    fun onFailureResponse(message: String)
+    fun onResponseFailure(message: String)
 
     fun initAdapter()
+
+    fun onRequestFailure()
 
 }

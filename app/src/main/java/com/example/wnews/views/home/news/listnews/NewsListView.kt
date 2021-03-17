@@ -13,9 +13,11 @@ interface NewsListView : NewsView {
 
     override fun onClickLike(newsId: Int)
 
-    override fun onSuccessResponse()
+    override fun onResponseSuccess()
 
-    override fun onFailureResponse(message: String)
+    override fun onResponseFailure(message: String)
+
+    override fun onRequestFailure()
 
     override fun initAdapter()
 }
