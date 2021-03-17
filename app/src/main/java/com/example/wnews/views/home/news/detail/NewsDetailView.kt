@@ -17,8 +17,4 @@ interface NewsDetailView : NewsView {
 
     override fun onResponseSuccess() {}
 
-    override fun onResponseFailure(message: String)
-
-    override fun onRequestFailure()
-
 }

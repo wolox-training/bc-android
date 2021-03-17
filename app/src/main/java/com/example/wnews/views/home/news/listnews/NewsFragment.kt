@@ -13,12 +13,13 @@ import com.example.wnews.databinding.FragmentNewsBinding
 import com.example.wnews.models.News
 import com.example.wnews.models.UserAuth
 import com.example.wnews.views.home.news.NewsProvider
+import com.example.wnews.views.home.news.NewsView
 import com.example.wnews.views.home.news.detail.DetailActivity
 import com.example.wnews.views.home.news.listnews.adapter.NewsAdapter
 import com.example.wnews.views.home.news.listnews.presenter.NewsPresenter
 import com.google.android.material.snackbar.Snackbar
 
-class NewsFragment : Fragment(R.layout.fragment_news), NewsListView {
+class NewsFragment : Fragment(R.layout.fragment_news), NewsView {
 
     private var binding: FragmentNewsBinding? = null
     private var viewManager = LinearLayoutManager(context)
@@ -151,13 +152,15 @@ class NewsFragment : Fragment(R.layout.fragment_news), NewsListView {
 
     override fun onResponseFailure(message: String) {
 
-        val newMessage = if (message.isEmpty()) {
-            getString(R.string.server_error)
-        } else {
-            message
-        }
+        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
 
-        Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
+        if (binding!!.recyclerViewNews.adapter!!.itemCount == 0) {
+            binding!!.containerNoConnection.visibility = View.VISIBLE
+        }
+    }
+
+    override fun onRequestFailure() {
+        Snackbar.make(newView, getString(R.string.server_error), Snackbar.LENGTH_LONG).show()
 
         if (binding!!.recyclerViewNews.adapter!!.itemCount == 0) {
             binding!!.containerNoConnection.visibility = View.VISIBLE

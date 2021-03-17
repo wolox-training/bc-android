@@ -82,13 +82,11 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsDetailView {
     }
 
     override fun onResponseFailure(message: String) {
-        val newMessage = if (message.isEmpty()) {
-            getString(R.string.server_error)
-        } else {
-            message
-        }
+        Snackbar.make(newView, message, Snackbar.LENGTH_LONG).show()
+    }
 
-        Snackbar.make(newView, newMessage, Snackbar.LENGTH_LONG).show()
+    override fun onRequestFailure() {
+        Snackbar.make(newView, getString(R.string.server_error), Snackbar.LENGTH_LONG).show()
     }
 
 }

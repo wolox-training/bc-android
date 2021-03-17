@@ -52,7 +52,7 @@ object NewsProvider {
             }
 
             override fun onFailure(call: Call<LikeResponse?>?, t: Throwable?) {
-                newsView.onResponseFailure("")
+                newsView.onRequestFailure()
             }
 
         })
@@ -123,7 +123,7 @@ object NewsProvider {
             }
 
             override fun onFailure(call: Call<ListNewsResponse?>?, t: Throwable?) {
-                newsViewProvider.onResponseFailure("")
+                newsViewProvider.onRequestFailure()
                 isLoading = false
                 newsViewProvider.showProgressBar(isLoading)
 

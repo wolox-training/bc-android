@@ -4,6 +4,8 @@ import com.example.wnews.models.News
 
 interface NewsView {
 
+    fun initAdapter()
+
     fun onNewPageReceived()
 
     fun showProgressBar(isLoading: Boolean)
@@ -15,8 +17,6 @@ interface NewsView {
     fun onResponseSuccess()
 
     fun onResponseFailure(message: String)
-
-    fun initAdapter()
 
     fun onRequestFailure()
 
