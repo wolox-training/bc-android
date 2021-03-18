@@ -20,24 +20,10 @@ class AuthPresenter(var sharedPref: SharedPreferences, val view: AuthView?) {
         return FormatUtils().EMAIL_ADDRESS_PATTERN.matcher(userMail).matches()
     }
 
-    fun isUserMailEmpty(userMail: String): Boolean {
+    fun isUserMailEmpty(userMail: String) = userMail.isEmpty()
 
-        if (userMail.isEmpty()) {
-            return true
-        }
 
-        return false
-    }
-
-    fun isUserPasswordEmpty(password: String): Boolean {
-
-        if (password.isEmpty()) {
-            return true
-        }
-
-        return false
-
-    }
+    fun isUserPasswordEmpty(password: String) = password.isEmpty()
 
     fun onResponseLogIn(user: User) {
 
