@@ -10,7 +10,6 @@ import androidx.preference.PreferenceManager
 import com.example.wnews.R
 import com.example.wnews.databinding.FragmentLoginBinding
 import com.example.wnews.models.User
-import com.example.wnews.utils.FormatUtils
 import com.example.wnews.views.auth.AuthPresenter
 import com.example.wnews.views.auth.AuthView
 import com.example.wnews.views.auth.signup.SignUpActivity
@@ -19,18 +18,21 @@ import com.example.wnews.views.home.HomeActivity
 class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
 
     private var binding: FragmentLoginBinding? = null
-    private val user = User()
-    private val utils = FormatUtils()
+    lateinit var authPresenter: AuthPresenter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentLoginBinding.bind(view)
-
+        initPresenter()
         setListener()
 
     }
 
+    private fun initPresenter() {
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        authPresenter = AuthPresenter(sharedPreferences, this)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -42,22 +44,23 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
         binding!!.buttonLogIn.setOnClickListener {
             binding!!.textviewMessageError.text = ""
 
-            user.apply {
+
+            val user = User().apply {
                 email = binding!!.editTextMail.text.toString()
                 password = binding!!.editTextPassword.text.toString()
             }
 
-            if (user.email.isEmpty()) {
+            if (authPresenter.isUserMailEmpty(user.email)) {
                 binding!!.editTextMail.error = getString(R.string.login_mail_missing)
                 return@setOnClickListener
             }
 
-            if (!utils.isValidEmail(user.email)) {
-                binding!!.editTextMail.error = getString(R.string.login_email_error)
+            if (authPresenter.validateUserMail(user.email)) {
+                binding!!.editTextMail.error = getString(R.string.login_mail_missing)
                 return@setOnClickListener
             }
 
-            if (user.password.isEmpty()) {
+            if (authPresenter.isUserPasswordEmpty(user.password)) {
                 binding!!.editTextPassword.error = getString(R.string.login_password_missing)
                 return@setOnClickListener
             }
@@ -66,9 +69,7 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
 
             statusFields(false)
 
-            val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-
-            AuthPresenter(prefs, this).onResponseLogIn(user)
+            authPresenter.onResponseLogIn(user)
 
         }
 
@@ -82,25 +83,26 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
         }
     }
 
-    override fun onAuthResponse(statusCode: Int) {
-        binding!!.progressBarLogin.visibility = View.GONE
-        statusFields(true)
-        when (statusCode) {
-
-            200 -> startActivity(Intent(context, HomeActivity::class.java))
-            401 -> binding!!.textviewMessageError.text = getString(R.string.login_fail_login)
-            0 -> binding!!.textviewMessageError.text = getString(R.string.server_error)
-
-        }
-    }
-
     private fun statusFields(status: Boolean) {
         binding!!.editTextMail.isEnabled = status
         binding!!.editTextPassword.isEnabled = status
         binding!!.buttonSignUp.isEnabled = status
         binding!!.buttonLogIn.isEnabled = status
         binding!!.buttonTerms.isEnabled = status
+    }
 
+    override fun onResponseSuccess() {
+        startActivity(Intent(context, HomeActivity::class.java))
+    }
+
+    override fun onResponseFailure(message: String) {
+        statusFields(true)
+        binding!!.textviewMessageError.text = message
+    }
+
+    override fun onRequestFailure() {
+        statusFields(true)
+        binding!!.textviewMessageError.text = getString(R.string.server_error)
     }
 
 
