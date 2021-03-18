@@ -55,8 +55,8 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
                 return@setOnClickListener
             }
 
-            if (authPresenter.validateUserMail(user.email)) {
-                binding!!.editTextMail.error = getString(R.string.login_mail_missing)
+            if (!authPresenter.validateUserMail(user.email)) {
+                binding!!.editTextMail.error = getString(R.string.login_email_error)
                 return@setOnClickListener
             }
 
@@ -96,11 +96,13 @@ class LoginFragment : Fragment(R.layout.fragment_login), AuthView {
     }
 
     override fun onResponseFailure(message: String) {
+        binding!!.progressBarLogin.visibility = View.GONE
         statusFields(true)
         binding!!.textviewMessageError.text = message
     }
 
     override fun onRequestFailure() {
+        binding!!.progressBarLogin.visibility = View.GONE
         statusFields(true)
         binding!!.textviewMessageError.text = getString(R.string.server_error)
     }

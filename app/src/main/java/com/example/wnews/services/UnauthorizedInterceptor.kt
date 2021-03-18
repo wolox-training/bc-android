@@ -16,7 +16,7 @@ class UnauthorizedInterceptor : Interceptor {
 
         if (response.code() == 401) {
 
-            val context = WNewsApplication().getContext()
+            val context = WNewsApplication.applicationContext()
 
             val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
