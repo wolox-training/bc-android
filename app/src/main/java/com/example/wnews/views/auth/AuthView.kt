@@ -2,7 +2,10 @@ package com.example.wnews.views.auth
 
 interface AuthView {
 
-    fun onAuthResponse(statusCode: Int)
+    fun onResponseSuccess()
 
+    fun onResponseFailure(message: String)
+
+    fun onRequestFailure()
 
 }
