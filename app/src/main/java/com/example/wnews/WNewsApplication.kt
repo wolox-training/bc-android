@@ -9,12 +9,10 @@ import com.facebook.drawee.backends.pipeline.Fresco
 
 class WNewsApplication : Application() {
 
-    private var context: Context? = null
 
     override fun onCreate() {
         super.onCreate()
 
-        context = applicationContext
         initializeUserPreference()
         initializeRetrofit()
         initializeFresco()
@@ -31,16 +29,23 @@ class WNewsApplication : Application() {
         Fresco.initialize(this)
     }
 
-    fun getContext(): Context {
-        return context!!
-
-    }
-
     private fun initializeUserPreference() {
 
         val sharedPreference = PreferenceManager.getDefaultSharedPreferences(this)
         UserProvider.intanceUserAuth(sharedPreference)
 
+    }
+
+    init {
+        instance = this
+    }
+
+    companion object {
+        private var instance: WNewsApplication? = null
+
+        fun applicationContext() : Context {
+            return instance!!.applicationContext
+        }
     }
 
 }
