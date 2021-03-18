@@ -26,9 +26,9 @@ class DetailFragment : Fragment(R.layout.fragment_detail), NewsDetailView {
 
         newView = view
 
-        val activity: DetailActivity? = activity as DetailActivity?
+        val detiailActivity: DetailActivity? = requireActivity() as DetailActivity?
 
-        val intentNewsId = activity!!.newsId
+        val intentNewsId = detiailActivity!!.newsId
 
         val news =
             DetailPresenter().arrayListNews.find { it.newsId == intentNewsId }
